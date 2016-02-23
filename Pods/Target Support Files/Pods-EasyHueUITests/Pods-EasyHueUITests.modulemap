@@ -1,0 +1,6 @@
+framework module Pods_EasyHueUITests {
+  umbrella header "Pods-EasyHueUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

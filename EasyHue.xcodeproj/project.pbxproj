@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B13690BBFF9C5F30A5A271 /* Pods_EasyHue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB47C2C0BDC75F5395671A7 /* Pods_EasyHue.framework */; };
 		19BC78341C7C696000783244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC78331C7C696000783244 /* AppDelegate.swift */; };
 		19BC78361C7C696000783244 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC78351C7C696000783244 /* FirstViewController.swift */; };
 		19BC78381C7C696000783244 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC78371C7C696000783244 /* SecondViewController.swift */; };
@@ -16,6 +17,7 @@
 		19BC784B1C7C696000783244 /* EasyHueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC784A1C7C696000783244 /* EasyHueTests.swift */; };
 		19BC78561C7C696000783244 /* EasyHueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC78551C7C696000783244 /* EasyHueUITests.swift */; };
 		B35C5D127B41CD3EC866491D /* Pods_EasyHueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4707E47F35260ED30E75B363 /* Pods_EasyHueTests.framework */; };
+		E3371C7767A98A03B7055E5F /* Pods_EasyHueUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAA024DE1CFCAE8870D46DF /* Pods_EasyHueUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		0BB8BD5E59A663FD11BB9920 /* Pods-EasyHueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests.release.xcconfig"; sourceTree = "<group>"; };
+		16AB89E6FD900B2E8F140655 /* Pods-EasyHueUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueUITests/Pods-EasyHueUITests.release.xcconfig"; sourceTree = "<group>"; };
 		191C07131C7CB04C00AE69D3 /* EasyHue-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyHue-Bridging-Header.h"; sourceTree = "<group>"; };
 		191C07141C7CB04C00AE69D3 /* EasyHueTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EasyHueTests-Bridging-Header.h"; path = "../EasyHue/EasyHueTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		191C07151C7CB04C00AE69D3 /* EasyHueUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EasyHueUITests-Bridging-Header.h"; path = "../EasyHue/EasyHueUITests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -54,8 +57,13 @@
 		19BC78511C7C696000783244 /* EasyHueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyHueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BC78551C7C696000783244 /* EasyHueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyHueUITests.swift; sourceTree = "<group>"; };
 		19BC78571C7C696000783244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AAA024DE1CFCAE8870D46DF /* Pods_EasyHueUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHueUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6FAC3F8980217D1D5AED64 /* Pods-EasyHueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4707E47F35260ED30E75B363 /* Pods_EasyHueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AB47C2C0BDC75F5395671A7 /* Pods_EasyHue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		948D95D911090732B140BA41 /* Pods-EasyHue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHue.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue.release.xcconfig"; sourceTree = "<group>"; };
+		A4A24EE5F1C97494C461F374 /* Pods-EasyHueUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueUITests/Pods-EasyHueUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB9F9360BCD9E9ED34815BFA /* Pods-EasyHue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B13690BBFF9C5F30A5A271 /* Pods_EasyHue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3371C7767A98A03B7055E5F /* Pods_EasyHueUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				4707E47F35260ED30E75B363 /* Pods_EasyHueTests.framework */,
+				4AB47C2C0BDC75F5395671A7 /* Pods_EasyHue.framework */,
+				2AAA024DE1CFCAE8870D46DF /* Pods_EasyHueUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -154,6 +166,10 @@
 			children = (
 				3A6FAC3F8980217D1D5AED64 /* Pods-EasyHueTests.debug.xcconfig */,
 				0BB8BD5E59A663FD11BB9920 /* Pods-EasyHueTests.release.xcconfig */,
+				BB9F9360BCD9E9ED34815BFA /* Pods-EasyHue.debug.xcconfig */,
+				948D95D911090732B140BA41 /* Pods-EasyHue.release.xcconfig */,
+				A4A24EE5F1C97494C461F374 /* Pods-EasyHueUITests.debug.xcconfig */,
+				16AB89E6FD900B2E8F140655 /* Pods-EasyHueUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -165,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19BC785A1C7C696000783244 /* Build configuration list for PBXNativeTarget "EasyHue" */;
 			buildPhases = (
+				45577B09F3034B651F912DC1 /* Check Pods Manifest.lock */,
 				19BC782C1C7C696000783244 /* Sources */,
 				19BC782D1C7C696000783244 /* Frameworks */,
 				19BC782E1C7C696000783244 /* Resources */,
+				9EA0FDD89DB8E990456BB8F6 /* Embed Pods Frameworks */,
+				AFDA10F055B493D509301E83 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19BC78601C7C696000783244 /* Build configuration list for PBXNativeTarget "EasyHueUITests" */;
 			buildPhases = (
+				E17544EFD33C0E18F4B3ACAE /* Check Pods Manifest.lock */,
 				19BC784D1C7C696000783244 /* Sources */,
 				19BC784E1C7C696000783244 /* Frameworks */,
 				19BC784F1C7C696000783244 /* Resources */,
+				8BB3C67259F1EA1AF18358C2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -305,6 +326,66 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		45577B09F3034B651F912DC1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8BB3C67259F1EA1AF18358C2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHueUITests/Pods-EasyHueUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EA0FDD89DB8E990456BB8F6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFDA10F055B493D509301E83 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CB432D4395C9CCA04D6CC73F /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,6 +414,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E17544EFD33C0E18F4B3ACAE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -484,6 +580,7 @@
 		};
 		19BC785B1C7C696000783244 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB9F9360BCD9E9ED34815BFA /* Pods-EasyHue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -499,6 +596,7 @@
 		};
 		19BC785C1C7C696000783244 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948D95D911090732B140BA41 /* Pods-EasyHue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -544,6 +642,7 @@
 		};
 		19BC78611C7C696000783244 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4A24EE5F1C97494C461F374 /* Pods-EasyHueUITests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyHueUITests/Info.plist;
@@ -559,6 +658,7 @@
 		};
 		19BC78621C7C696000783244 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16AB89E6FD900B2E8F140655 /* Pods-EasyHueUITests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyHueUITests/Info.plist;
