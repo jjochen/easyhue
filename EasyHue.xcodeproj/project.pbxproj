@@ -37,6 +37,9 @@
 
 /* Begin PBXFileReference section */
 		0BB8BD5E59A663FD11BB9920 /* Pods-EasyHueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests.release.xcconfig"; sourceTree = "<group>"; };
+		191C07131C7CB04C00AE69D3 /* EasyHue-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyHue-Bridging-Header.h"; sourceTree = "<group>"; };
+		191C07141C7CB04C00AE69D3 /* EasyHueTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EasyHueTests-Bridging-Header.h"; path = "../EasyHue/EasyHueTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		191C07151C7CB04C00AE69D3 /* EasyHueUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EasyHueUITests-Bridging-Header.h"; path = "../EasyHue/EasyHueUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		19BC78301C7C696000783244 /* EasyHue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyHue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BC78331C7C696000783244 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19BC78351C7C696000783244 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 		19BC78321C7C696000783244 /* EasyHue */ = {
 			isa = PBXGroup;
 			children = (
+				191C07131C7CB04C00AE69D3 /* EasyHue-Bridging-Header.h */,
 				19BC78331C7C696000783244 /* AppDelegate.swift */,
 				19BC78351C7C696000783244 /* FirstViewController.swift */,
 				19BC78371C7C696000783244 /* SecondViewController.swift */,
@@ -120,6 +124,7 @@
 		19BC78491C7C696000783244 /* EasyHueTests */ = {
 			isa = PBXGroup;
 			children = (
+				191C07141C7CB04C00AE69D3 /* EasyHueTests-Bridging-Header.h */,
 				19BC784A1C7C696000783244 /* EasyHueTests.swift */,
 				19BC784C1C7C696000783244 /* Info.plist */,
 			);
@@ -129,6 +134,7 @@
 		19BC78541C7C696000783244 /* EasyHueUITests */ = {
 			isa = PBXGroup;
 			children = (
+				191C07151C7CB04C00AE69D3 /* EasyHueUITests-Bridging-Header.h */,
 				19BC78551C7C696000783244 /* EasyHueUITests.swift */,
 				19BC78571C7C696000783244 /* Info.plist */,
 			);
@@ -480,11 +486,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EasyHue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jochen-pfeiffer.easyhue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyHue/EasyHue-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -492,11 +501,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EasyHue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jochen-pfeiffer.easyhue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyHue/EasyHue-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -505,10 +516,13 @@
 			baseConfigurationReference = 3A6FAC3F8980217D1D5AED64 /* Pods-EasyHueTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyHueTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jochen-pfeiffer.EasyHueTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyHue/EasyHueTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyHue.app/EasyHue";
 			};
 			name = Debug;
@@ -518,10 +532,12 @@
 			baseConfigurationReference = 0BB8BD5E59A663FD11BB9920 /* Pods-EasyHueTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyHueTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jochen-pfeiffer.EasyHueTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyHue/EasyHueTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyHue.app/EasyHue";
 			};
 			name = Release;
@@ -529,10 +545,13 @@
 		19BC78611C7C696000783244 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyHueUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jochen-pfeiffer.EasyHueUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyHue/EasyHueUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_TARGET_NAME = EasyHue;
 				USES_XCTRUNNER = YES;
 			};
@@ -541,10 +560,12 @@
 		19BC78621C7C696000783244 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyHueUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jochen-pfeiffer.EasyHueUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EasyHue/EasyHueUITests-Bridging-Header.h";
 				TEST_TARGET_NAME = EasyHue;
 				USES_XCTRUNNER = YES;
 			};
