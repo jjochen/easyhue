@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04B13690BBFF9C5F30A5A271 /* Pods_EasyHue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB47C2C0BDC75F5395671A7 /* Pods_EasyHue.framework */; };
+		191C071C1C7CE68900AE69D3 /* HueSDKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C071B1C7CE68900AE69D3 /* HueSDKClient.swift */; };
 		19BC78341C7C696000783244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC78331C7C696000783244 /* AppDelegate.swift */; };
 		19BC78361C7C696000783244 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC78351C7C696000783244 /* FirstViewController.swift */; };
 		19BC78381C7C696000783244 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC78371C7C696000783244 /* SecondViewController.swift */; };
@@ -43,6 +44,7 @@
 		191C07131C7CB04C00AE69D3 /* EasyHue-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyHue-Bridging-Header.h"; sourceTree = "<group>"; };
 		191C07141C7CB04C00AE69D3 /* EasyHueTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EasyHueTests-Bridging-Header.h"; path = "../EasyHue/EasyHueTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		191C07151C7CB04C00AE69D3 /* EasyHueUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EasyHueUITests-Bridging-Header.h"; path = "../EasyHue/EasyHueUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		191C071B1C7CE68900AE69D3 /* HueSDKClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueSDKClient.swift; sourceTree = "<group>"; };
 		19BC78301C7C696000783244 /* EasyHue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyHue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BC78331C7C696000783244 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19BC78351C7C696000783244 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				19BC78331C7C696000783244 /* AppDelegate.swift */,
 				19BC78351C7C696000783244 /* FirstViewController.swift */,
 				19BC78371C7C696000783244 /* SecondViewController.swift */,
+				191C071B1C7CE68900AE69D3 /* HueSDKClient.swift */,
 				19BC78391C7C696000783244 /* Main.storyboard */,
 				19BC783C1C7C696000783244 /* Assets.xcassets */,
 				19BC783E1C7C696000783244 /* LaunchScreen.storyboard */,
@@ -441,6 +444,7 @@
 				19BC78381C7C696000783244 /* SecondViewController.swift in Sources */,
 				19BC78341C7C696000783244 /* AppDelegate.swift in Sources */,
 				19BC78361C7C696000783244 /* FirstViewController.swift in Sources */,
+				191C071C1C7CE68900AE69D3 /* HueSDKClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
