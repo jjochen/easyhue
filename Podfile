@@ -6,15 +6,13 @@ use_frameworks!
 
 target 'EasyHue' do
     pod 'PhilipsHueSDK-iOS'
-    
+    pod 'ReactiveCocoa', '~> 4.0'
+    pod 'SVProgressHUD', '~> 1.1'
 end
 
 target 'EasyHueTests' do
-    pod 'PhilipsHueSDK-iOS'
-    pod 'OCMock', '~> 3.2'
 end
 
 target 'EasyHueUITests' do
-    pod 'PhilipsHueSDK-iOS'
 end
 
