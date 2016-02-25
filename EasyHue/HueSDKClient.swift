@@ -23,27 +23,6 @@ class HueSDKClient: NSObject {
     
 // MARK: Notifications
     
-    func registerForNotifications() {
-        
-        let notificationManager = PHNotificationManager.defaultManager();
-        notificationManager.registerObject(self, withSelector:Selector("localConnection:"), forNotification:LOCAL_CONNECTION_NOTIFICATION)
-        notificationManager.registerObject(self, withSelector:Selector("noLocalConnection:"), forNotification:NO_LOCAL_CONNECTION_NOTIFICATION)
-        notificationManager.registerObject(self, withSelector:Selector("notAuthenticated:"), forNotification:NO_LOCAL_AUTHENTICATION_NOTIFICATION)
-    }
-    
-    func localConnection(notifiction: NSNotification) {
-        
-    }
-    
-    func noLocalConnection(notifiction: NSNotification) {
-        
-    }
-    func notAuthenticated(notifiction: NSNotification) {
-        
-    }
-    
-    
-// MARK: Heartbeat
     
     func enableLocalHeartbeat() {
         /***************************************************
@@ -72,3 +51,25 @@ class HueSDKClient: NSObject {
     }
 }
 
+private extension HueSDKClient
+{
+    func registerForNotifications() {
+        
+        let notificationManager = PHNotificationManager.defaultManager();
+        notificationManager.registerObject(self, withSelector:Selector("localConnection:"), forNotification:LOCAL_CONNECTION_NOTIFICATION)
+        notificationManager.registerObject(self, withSelector:Selector("noLocalConnection:"), forNotification:NO_LOCAL_CONNECTION_NOTIFICATION)
+        notificationManager.registerObject(self, withSelector:Selector("notAuthenticated:"), forNotification:NO_LOCAL_AUTHENTICATION_NOTIFICATION)
+    }
+    
+    func localConnection(notifiction: NSNotification) {
+        
+    }
+    
+    func noLocalConnection(notifiction: NSNotification) {
+        
+    }
+    
+    func notAuthenticated(notifiction: NSNotification) {
+        
+    }
+}
