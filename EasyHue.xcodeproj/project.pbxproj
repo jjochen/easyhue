@@ -10,6 +10,8 @@
 		04B13690BBFF9C5F30A5A271 /* Pods_EasyHue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB47C2C0BDC75F5395671A7 /* Pods_EasyHue.framework */; };
 		191C071C1C7CE68900AE69D3 /* HueSDKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C071B1C7CE68900AE69D3 /* HueSDKClient.swift */; };
 		191C071E1C7E108200AE69D3 /* BridgePushLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C071D1C7E108200AE69D3 /* BridgePushLinkViewController.swift */; };
+		191C07211C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C07201C7F770900AE69D3 /* BridgePushLinkViewModel.swift */; };
+		191C07221C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C07201C7F770900AE69D3 /* BridgePushLinkViewModel.swift */; };
 		19BC78341C7C696000783244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC78331C7C696000783244 /* AppDelegate.swift */; };
 		19BC783B1C7C696000783244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BC78391C7C696000783244 /* Main.storyboard */; };
 		19BC783D1C7C696000783244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19BC783C1C7C696000783244 /* Assets.xcassets */; };
@@ -43,6 +45,7 @@
 		191C07151C7CB04C00AE69D3 /* EasyHueUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EasyHueUITests-Bridging-Header.h"; path = "../EasyHue/EasyHueUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		191C071B1C7CE68900AE69D3 /* HueSDKClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueSDKClient.swift; sourceTree = "<group>"; };
 		191C071D1C7E108200AE69D3 /* BridgePushLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgePushLinkViewController.swift; sourceTree = "<group>"; };
+		191C07201C7F770900AE69D3 /* BridgePushLinkViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgePushLinkViewModel.swift; sourceTree = "<group>"; };
 		19BC78301C7C696000783244 /* EasyHue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyHue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BC78331C7C696000783244 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19BC783A1C7C696000783244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191C071F1C7F768F00AE69D3 /* BridgePushLink */ = {
+			isa = PBXGroup;
+			children = (
+				191C071D1C7E108200AE69D3 /* BridgePushLinkViewController.swift */,
+				191C07201C7F770900AE69D3 /* BridgePushLinkViewModel.swift */,
+			);
+			name = BridgePushLink;
+			sourceTree = "<group>";
+		};
 		19BC78271C7C696000783244 = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				19BC78331C7C696000783244 /* AppDelegate.swift */,
-				191C071D1C7E108200AE69D3 /* BridgePushLinkViewController.swift */,
 				191C071B1C7CE68900AE69D3 /* HueSDKClient.swift */,
+				191C071F1C7F768F00AE69D3 /* BridgePushLink */,
 				19BC78391C7C696000783244 /* Main.storyboard */,
 				19BC783C1C7C696000783244 /* Assets.xcassets */,
 				19BC783E1C7C696000783244 /* LaunchScreen.storyboard */,
@@ -433,6 +445,7 @@
 				19BC78341C7C696000783244 /* AppDelegate.swift in Sources */,
 				191C071C1C7CE68900AE69D3 /* HueSDKClient.swift in Sources */,
 				191C071E1C7E108200AE69D3 /* BridgePushLinkViewController.swift in Sources */,
+				191C07211C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19BC784B1C7C696000783244 /* HueSDKClientTests.swift in Sources */,
+				191C07221C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,12 +12,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var hueSDK: HueSDKClient?
+    var hueSDK: PHHueSDK?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
         
+        hueSDK = PHHueSDK()
+        hueSDK?.enableLogging(true);
+        hueSDK?.startUpSDK()
+        
+        let viewModel = BridgePushLinkViewModel(hueSDK: hueSDK!)
+        let viewController: BridgePushLinkViewController? = window?.rootViewController as? BridgePushLinkViewController
+        viewController?.viewModel = viewModel
         
         return true
     }
