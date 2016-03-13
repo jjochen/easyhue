@@ -8,68 +8,84 @@
 
 import Foundation
 
-class HueSDKClient: NSObject {
-    
-    let sdk: PHHueSDK
-    
-    override init() {
-        sdk = PHHueSDK()
+
+class HueSDKClient: NSObject
+{
+    override init()
+    {
+        self.hueSDK = PHHueSDK()
+        self.hueSDK.startUpSDK()
+        self.hueSDK.enableLogging(true)
+        
         super.init()
+        
         registerForNotifications()
-        sdk.enableLogging(true)
-        sdk.startUpSDK()
     }
     
+    private let hueSDK: PHHueSDK
+    private var bridgeSearch: PHBridgeSearching?
     
-// MARK: Notifications
+    // MARK: Heartbeat
     
-    
-    func enableLocalHeartbeat() {
-        /***************************************************
-         The heartbeat processing collects data from the bridge
-         so now try to see if we have a bridge already connected
-         *****************************************************/
-    
+    func enableLocalHeartbeat()
+    {
         let cache: PHBridgeResourcesCache? = PHBridgeResourcesReader.readBridgeResourcesCache()
         
-        if cache != nil && cache!.bridgeConfiguration != nil && cache!.bridgeConfiguration!.ipaddress != nil {
-            sdk.enableLocalConnection()
-            
-        } else {
-            
+        if cache != nil && cache!.bridgeConfiguration != nil && cache!.bridgeConfiguration!.ipaddress != nil
+        {
+            self.hueSDK.enableLocalConnection()
+        }
+        else
+        {
             searchForBridgeLocal()
         }
     }
     
-    func disableLocalHeartbeat() {
-        sdk.disableLocalConnection()
+    func disableLocalHeartbeat()
+    {
+        self.hueSDK.disableLocalConnection()
     }
     
+    // MARK: Bridge Management
     
-    func searchForBridgeLocal() {
+    func searchForBridgeLocal()
+    {
+        disableLocalHeartbeat()
+        self.bridgeSearch = PHBridgeSearching(upnpSearch: true, andPortalSearch: true, andIpAdressSearch: true)
+        bridgeSearch?.startSearchWithCompletionHandler { (bridgesFound: [NSObject : AnyObject]!) -> Void in
+            print(bridgesFound)
+            
+        }
         
     }
+    
+    
 }
+
+
 
 private extension HueSDKClient
 {
-    func registerForNotifications() {
-        
+    func registerForNotifications()
+    {
         let notificationManager = PHNotificationManager.defaultManager();
         notificationManager.registerObject(self, withSelector:Selector("localConnection:"), forNotification:LOCAL_CONNECTION_NOTIFICATION)
         notificationManager.registerObject(self, withSelector:Selector("noLocalConnection:"), forNotification:NO_LOCAL_CONNECTION_NOTIFICATION)
         notificationManager.registerObject(self, withSelector:Selector("notAuthenticated:"), forNotification:NO_LOCAL_AUTHENTICATION_NOTIFICATION)
     }
     
-    func localConnection(notifiction: NSNotification) {
+    func localConnection(notifiction: NSNotification)
+    {
         
     }
     
-    func noLocalConnection(notifiction: NSNotification) {
+    func noLocalConnection(notifiction: NSNotification)
+    {
         
     }
     
-    func notAuthenticated(notifiction: NSNotification) {
+    func notAuthenticated(notifiction: NSNotification)
+    {
         
     }
 }
