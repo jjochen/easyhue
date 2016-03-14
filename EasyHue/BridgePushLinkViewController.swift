@@ -7,13 +7,17 @@
 //
 
 import UIKit
-import ReactiveCocoa
+import RxSwift
+import RxCocoa
 
 class BridgePushLinkViewController: UIViewController
 {
     internal var viewModel: BridgePushLinkViewModel?
+    private var disposeBag = DisposeBag()
     
     @IBOutlet weak var progressView: UIProgressView!
+    
+    // MARK: - Live Cycle
     
     override func viewDidLoad()
     {
@@ -26,15 +30,15 @@ class BridgePushLinkViewController: UIViewController
         self.viewModel?.startPushLinking()
     }
     
-    // MARK: - RAC Bindings
+    // MARK: - Bindings
     
-    func setupBindings()
+    private func setupBindings()
     {
-         viewModel?.pushLinkProgress.producer.observeOn(UIScheduler()).startWithNext {
-                self.progressView.progress = $0
-        }
+        viewModel?.pushLinkProgress
+            .subscribeNext { pushLinkProgress in
+                self.progressView.progress = pushLinkProgress
+            }
+            .addDisposableTo(disposeBag)
     }
-
-  
 }
 

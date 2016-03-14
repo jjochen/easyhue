@@ -64,8 +64,10 @@
 		2AAA024DE1CFCAE8870D46DF /* Pods_EasyHueUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHueUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4707E47F35260ED30E75B363 /* Pods_EasyHueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB47C2C0BDC75F5395671A7 /* Pods_EasyHue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6557457FE4E60C7302B7BCE7 /* Pods-EasyHueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests.release.xcconfig"; sourceTree = "<group>"; };
 		948D95D911090732B140BA41 /* Pods-EasyHue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHue.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue.release.xcconfig"; sourceTree = "<group>"; };
 		BB9F9360BCD9E9ED34815BFA /* Pods-EasyHue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue.debug.xcconfig"; sourceTree = "<group>"; };
+		D9ABE0B32CE27CDC2B4DD8F7 /* Pods-EasyHueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,8 @@
 			children = (
 				BB9F9360BCD9E9ED34815BFA /* Pods-EasyHue.debug.xcconfig */,
 				948D95D911090732B140BA41 /* Pods-EasyHue.release.xcconfig */,
+				D9ABE0B32CE27CDC2B4DD8F7 /* Pods-EasyHueTests.debug.xcconfig */,
+				6557457FE4E60C7302B7BCE7 /* Pods-EasyHueTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -639,6 +643,7 @@
 		};
 		19BC785E1C7C696000783244 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9ABE0B32CE27CDC2B4DD8F7 /* Pods-EasyHueTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -654,6 +659,7 @@
 		};
 		19BC785F1C7C696000783244 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6557457FE4E60C7302B7BCE7 /* Pods-EasyHueTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;

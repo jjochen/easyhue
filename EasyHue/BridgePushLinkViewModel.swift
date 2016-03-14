@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ReactiveCocoa
+import RxSwift
 
 internal class BridgePushLinkViewModel: NSObject
 {
@@ -15,7 +15,10 @@ internal class BridgePushLinkViewModel: NSObject
     let hueSDK: PHHueSDK
     
     // MARK: Outputs
-    var pushLinkProgress: MutableProperty<Float> = MutableProperty<Float>(0.0)
+    private let _pushLinkProgress = Variable<Float>(0)
+    var pushLinkProgress: Observable<Float> {
+        return _pushLinkProgress.asObservable()
+    }
     
     
     // MARK: Lifecycle
@@ -82,7 +85,7 @@ internal class BridgePushLinkViewModel: NSObject
             return
         }
         
-        pushLinkProgress.value = (progressPercentage as! NSNumber).floatValue / Float(100)
+        _pushLinkProgress.value = (progressPercentage as! NSNumber).floatValue / Float(100)
     }
     
     private func failWithError(errorCode: CLErrorCode, description: String)
