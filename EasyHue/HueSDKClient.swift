@@ -16,7 +16,6 @@ class HueSDKClient: NSObject
         self.hueSDK = PHHueSDK()
         self.hueSDK.startUpSDK()
         self.hueSDK.enableLogging(true)
-        
         super.init()
         
         registerForNotifications()
@@ -48,18 +47,26 @@ class HueSDKClient: NSObject
     
     // MARK: Bridge Management
     
-    func searchForBridgeLocal()
+    internal func searchForBridgeLocal()
     {
         disableLocalHeartbeat()
         self.bridgeSearch = PHBridgeSearching(upnpSearch: true, andPortalSearch: true, andIpAdressSearch: true)
         bridgeSearch?.startSearchWithCompletionHandler { (bridgesFound: [NSObject : AnyObject]!) -> Void in
             print(bridgesFound)
-            
         }
         
     }
     
-    
+    internal func startPushLinking()
+    {
+        self.hueSDK.startPushlinkAuthentication()
+    }
+ 
+    func useBridge(bridgeId: String!, ipAddress: String!) {
+        self.hueSDK.setBridgeToUseWithId(bridgeId, ipAddress: ipAddress)
+        
+        self.enableLocalHeartbeat()
+    }
 }
 
 
@@ -72,6 +79,7 @@ private extension HueSDKClient
         notificationManager.registerObject(self, withSelector:Selector("localConnection:"), forNotification:LOCAL_CONNECTION_NOTIFICATION)
         notificationManager.registerObject(self, withSelector:Selector("noLocalConnection:"), forNotification:NO_LOCAL_CONNECTION_NOTIFICATION)
         notificationManager.registerObject(self, withSelector:Selector("notAuthenticated:"), forNotification:NO_LOCAL_AUTHENTICATION_NOTIFICATION)
+
     }
     
     func localConnection(notifiction: NSNotification)
@@ -89,3 +97,5 @@ private extension HueSDKClient
         
     }
 }
+
+

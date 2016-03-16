@@ -11,11 +11,13 @@ import RxSwift
 
 internal class BridgePushLinkViewModel: NSObject
 {
+    // MARK: Variables
+    private let _pushLinkProgress = Variable<Float>(0)
+    
     // MARK: Inputs
     let hueSDK: PHHueSDK
     
     // MARK: Outputs
-    private let _pushLinkProgress = Variable<Float>(0)
     var pushLinkProgress: Observable<Float> {
         return _pushLinkProgress.asObservable()
     }
