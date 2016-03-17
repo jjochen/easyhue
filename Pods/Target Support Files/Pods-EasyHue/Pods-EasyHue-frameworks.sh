@@ -85,19 +85,19 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-EasyHue/CocoaLumberjack.framework"
+  install_framework "Pods-EasyHue/PKHUD.framework"
   install_framework "Pods-EasyHue/Realm.framework"
   install_framework "Pods-EasyHue/RealmSwift.framework"
   install_framework "Pods-EasyHue/RxBlocking.framework"
   install_framework "Pods-EasyHue/RxCocoa.framework"
   install_framework "Pods-EasyHue/RxSwift.framework"
-  install_framework "Pods-EasyHue/SVProgressHUD.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-EasyHue/CocoaLumberjack.framework"
+  install_framework "Pods-EasyHue/PKHUD.framework"
   install_framework "Pods-EasyHue/Realm.framework"
   install_framework "Pods-EasyHue/RealmSwift.framework"
   install_framework "Pods-EasyHue/RxBlocking.framework"
   install_framework "Pods-EasyHue/RxCocoa.framework"
   install_framework "Pods-EasyHue/RxSwift.framework"
-  install_framework "Pods-EasyHue/SVProgressHUD.framework"
 fi

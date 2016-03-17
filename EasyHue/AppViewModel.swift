@@ -22,6 +22,12 @@ class AppViewModel
         return _availableBridges.asDriver()
     }
     
+    private let _isLoading = Variable<Bool>(false)
+    internal var isLoading: Driver<Bool> {
+        return _isLoading.asDriver()
+    }
+    
+    
     // MARK: Variables
     private var _bridgeSearch: PHBridgeSearching?
     
@@ -38,8 +44,10 @@ class AppViewModel
     internal func searchForBridgeLocal()
     {
         _bridgeSearch = PHBridgeSearching(upnpSearch: true, andPortalSearch: true, andIpAdressSearch: true)
+        _isLoading.value = true
         _bridgeSearch!.startSearchWithCompletionHandler { (bridgesFound: [NSObject : AnyObject]!) -> Void in
             self._availableBridges.value = bridgesFound
+            self._isLoading.value = false
         }
         
     }

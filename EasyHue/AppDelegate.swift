@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import PKHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,11 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.viewModel = AppViewModel(hueSDK: self.hueSDK)
         self.viewModel?.searchForBridgeLocal()
         
-        self.viewModel?.availableBridges
-            .driveNext { bridges in
-                print(bridges)
-            }
-            .addDisposableTo(disposeBag)
+        self.setupBindings()
         
         return true
     }
@@ -54,16 +51,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     
-    private func showBridgePushLinkViewController() {
-        
-    }
+    // MARK: - Bindings
     
-    private func showBridgeSelectionViewController() {
-        
-    }
-    
-    private func showLoadingIndicator()
+    private func setupBindings()
     {
-        SVProgressHUD.show()
+        self.viewModel?.availableBridges
+            .driveNext { bridges in
+                print(bridges)
+            }
+            .addDisposableTo(disposeBag)
+        
+        
+        self.viewModel?.isLoading
+            .driveNext { loading in
+                if loading {
+                    HUD.show(.Progress)
+                }
+                else {
+                    HUD.hide()
+                }
+            }
+            .addDisposableTo(disposeBag)
+    }
+    
+    func showBridgePushLinkViewController() {
+        
+    }
+    
+    func showBridgeSelectionViewController() {
+        
+    }
+    
+    func showLoadingIndicator()
+    {
     }
 }
