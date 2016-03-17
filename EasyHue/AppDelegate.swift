@@ -7,19 +7,30 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let hueSDKClient: HueSDKClient = HueSDKClient()
-    let viewModel: AppViewModel = AppViewModel()
+    let hueSDK = PHHueSDK()
+    var viewModel: AppViewModel?
+    let disposeBag = DisposeBag()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
+        self.hueSDK.startUpSDK()
+        self.hueSDK.enableLogging(false)
         
-        self.hueSDKClient.searchForBridgeLocal()
+        self.viewModel = AppViewModel(hueSDK: self.hueSDK)
+        self.viewModel?.searchForBridgeLocal()
         
+        self.viewModel?.availableBridges
+            .driveNext { bridges in
+                print(bridges)
+            }
+            .addDisposableTo(disposeBag)
         
         return true
     }
@@ -29,11 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-        self.hueSDKClient.disableLocalHeartbeat()
+        
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
-        self.hueSDKClient.enableLocalHeartbeat()
+        
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
@@ -42,5 +53,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
     }
 
-
+    
+    private func showBridgePushLinkViewController() {
+        
+    }
+    
+    private func showBridgeSelectionViewController() {
+        
+    }
+    
+    private func showLoadingIndicator()
+    {
+        SVProgressHUD.show()
+    }
 }
