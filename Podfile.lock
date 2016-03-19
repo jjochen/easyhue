@@ -4,40 +4,59 @@ PODS:
   - CocoaLumberjack/Core (1.9.2)
   - CocoaLumberjack/Extensions (1.9.2):
     - CocoaLumberjack/Core
+  - Nimble (3.2.0)
   - PhilipsHueSDK-iOS (1.11.2):
     - CocoaLumberjack (~> 1.8)
   - PKHUD (3.1.0)
-  - Realm (0.98.2):
-    - Realm/Headers (= 0.98.2)
-  - Realm/Headers (0.98.2)
-  - RealmSwift (0.98.2):
-    - Realm (= 0.98.2)
-  - RxBlocking (2.2.0):
+  - Realm (0.98.5):
+    - Realm/Headers (= 0.98.5)
+  - Realm/Headers (0.98.5)
+  - RealmSwift (0.98.5):
+    - Realm (= 0.98.5)
+  - RxBlocking (2.3.0):
+    - RxSwift (~> 2.3)
+  - RxCocoa (2.3.0):
+    - RxSwift (~> 2.3)
+  - RxDataSources (0.6.1):
+    - RxCocoa (~> 2.2)
     - RxSwift (~> 2.2)
-  - RxCocoa (2.2.0):
-    - RxSwift (~> 2.2)
-  - RxSwift (2.2.0)
-  - RxTests (2.2.0):
-    - RxSwift (~> 2.2)
+  - RxNimble (0.1.0):
+    - Nimble (~> 3.0)
+    - RxBlocking (~> 2.0)
+    - RxSwift (~> 2.0)
+  - RxOptional (2.0.0):
+    - RxCocoa (~> 2.0)
+    - RxSwift (~> 2.0)
+  - RxSwift (2.3.0)
+  - RxTests (2.3.0):
+    - RxSwift (~> 2.3)
 
 DEPENDENCIES:
+  - Nimble (~> 3.2)
   - PhilipsHueSDK-iOS
   - PKHUD (~> 3.1)
   - RealmSwift (~> 0.98)
   - RxBlocking (~> 2.0)
   - RxCocoa (~> 2.0)
+  - RxDataSources (~> 0.6)
+  - RxNimble (~> 0.1)
+  - RxOptional (~> 2.0)
   - RxSwift (~> 2.0)
   - RxTests (~> 2.0)
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 628fca2e88ef06f7cf6817309aa405f325d9a6fa
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   PhilipsHueSDK-iOS: dc7a46c819347b6895923960df1c9a6b4aa25cd6
   PKHUD: 4167eccdb1b3a892fd80ce2b51cb6ba412a889ab
-  Realm: 88a147fe04b8f07191a676b15c779b2b448991de
-  RealmSwift: 9907c7415b3e19ef2ab9f89878fc890f03f93aea
-  RxBlocking: 5bbc826774c4290effa8fe070841e9d45e864639
-  RxCocoa: 42efb7a7145a8d1d5878e94ce48a580d29e0c796
-  RxSwift: b8a749f2204c6c7a5c29b306a9c3bc11d5b87c5b
-  RxTests: bff19d036313b8f9bbfcc8e2f9ae436dffc7093f
+  Realm: db08379969e45cea2edd1c3c0a090fe9e22d2d2f
+  RealmSwift: cb11ad1c35e15dc982f2dbf5afe2a3124193a358
+  RxBlocking: 4616f93183a76aeee681262377e5c4aca0515b06
+  RxCocoa: cde4e993f496d2577bc3ba8b7dc7bf55a4ed809a
+  RxDataSources: f201802aa904bcbc17c38b82e92f282df401a0ce
+  RxNimble: e46b03db87084232a33f3c3dade1e2cf147cd44e
+  RxOptional: b77fb47a0190213cf8a37c7a2b7fda28160b4563
+  RxSwift: 0df59cc5edf28a31dbf83b049220b4b8e76b07c8
+  RxTests: 321381af540a52281f90f89c066e25c8f42d18fa
 
 COCOAPODS: 0.39.0

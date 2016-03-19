@@ -12,43 +12,22 @@ import RxCocoa
 
 class AppViewModel
 {
+    // MARK: - Input
     
-    // MARK: Input
     let hueSDK: PHHueSDK
     
-    // MARK: Output
-    private let _availableBridges = Variable<[NSObject : AnyObject]>([:])
-    internal var availableBridges: Driver<[NSObject : AnyObject]> {
-        return _availableBridges.asDriver()
-    }
     
-    private let _isLoading = Variable<Bool>(false)
-    internal var isLoading: Driver<Bool> {
-        return _isLoading.asDriver()
-    }
+    // MARK: - Livecycle
     
-    
-    // MARK: Variables
-    private var _bridgeSearch: PHBridgeSearching?
-    
-    
-    // MARK: -
-    // MARK: Livecycle
     init(hueSDK: PHHueSDK) {
         self.hueSDK = hueSDK
     }
     
     
-    // MARK: Bridge Management
+    // MARK: - View Models
     
-    internal func searchForBridgeLocal()
-    {
-        _bridgeSearch = PHBridgeSearching(upnpSearch: true, andPortalSearch: true, andIpAdressSearch: true)
-        _isLoading.value = true
-        _bridgeSearch!.startSearchWithCompletionHandler { (bridgesFound: [NSObject : AnyObject]!) -> Void in
-            self._availableBridges.value = bridgesFound
-            self._isLoading.value = false
-        }
-        
+    func brideSelectionViewModel() -> BridgeSelectionViewModel {
+        return BridgeSelectionViewModel(hueSDK: self.hueSDK)
     }
+    
 }

@@ -10,12 +10,17 @@ target 'EasyHue' do
     pod 'RxSwift', '~> 2.0'
     pod 'RxCocoa', '~> 2.0'
     pod 'RxBlocking', '~> 2.0'
+#    pod 'RxViewModel', '~> 3.0'
+    pod 'RxOptional', '~> 2.0'
+    pod 'RxDataSources', '~> 0.6'
     pod 'RealmSwift', '~> 0.98'
     pod 'PKHUD', '~> 3.1'
 end
 
 target 'EasyHueTests' do
+    pod 'Nimble', '~> 3.2'
     pod 'RxTests', '~> 2.0'
+    pod 'RxNimble', '~> 0.1'
 end
 
 target 'EasyHueUITests' do

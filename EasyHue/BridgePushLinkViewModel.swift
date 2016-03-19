@@ -8,8 +8,9 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
-internal class BridgePushLinkViewModel: NSObject
+internal class BridgePushLinkViewModel: ViewModel
 {
     // MARK: Variables
     private let _pushLinkProgress = Variable<Float>(0)

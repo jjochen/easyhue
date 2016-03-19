@@ -84,10 +84,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-EasyHueTests/RxBlocking.framework"
   install_framework "Pods-EasyHueTests/RxSwift.framework"
+  install_framework "Pods-EasyHueTests/Nimble.framework"
+  install_framework "Pods-EasyHueTests/RxNimble.framework"
   install_framework "Pods-EasyHueTests/RxTests.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-EasyHueTests/RxBlocking.framework"
   install_framework "Pods-EasyHueTests/RxSwift.framework"
+  install_framework "Pods-EasyHueTests/Nimble.framework"
+  install_framework "Pods-EasyHueTests/RxNimble.framework"
   install_framework "Pods-EasyHueTests/RxTests.framework"
 fi

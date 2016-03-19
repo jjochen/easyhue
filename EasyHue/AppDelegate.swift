@@ -23,11 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         self.hueSDK.startUpSDK()
         self.hueSDK.enableLogging(false)
-        
         self.viewModel = AppViewModel(hueSDK: self.hueSDK)
-        self.viewModel?.searchForBridgeLocal()
         
         self.setupBindings()
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let bridgeSelectionViewController: BridgeSelectionViewController = storyboard.instantiateViewControllerWithIdentifier("BridgeSelection") as! BridgeSelectionViewController
+        bridgeSelectionViewController.viewModel = self.viewModel?.brideSelectionViewModel()
+        
+        self.window?.rootViewController = bridgeSelectionViewController
+        self.window?.makeKeyAndVisible()
         
         return true
     }
@@ -55,34 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupBindings()
     {
-        self.viewModel?.availableBridges
-            .driveNext { bridges in
-                print(bridges)
-            }
-            .addDisposableTo(disposeBag)
-        
-        
-        self.viewModel?.isLoading
-            .driveNext { loading in
-                if loading {
-                    HUD.show(.Progress)
-                }
-                else {
-                    HUD.hide()
-                }
-            }
-            .addDisposableTo(disposeBag)
+
     }
     
-    func showBridgePushLinkViewController() {
-        
-    }
-    
-    func showBridgeSelectionViewController() {
-        
-    }
-    
-    func showLoadingIndicator()
-    {
-    }
 }

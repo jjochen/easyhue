@@ -90,6 +90,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-EasyHue/RealmSwift.framework"
   install_framework "Pods-EasyHue/RxBlocking.framework"
   install_framework "Pods-EasyHue/RxCocoa.framework"
+  install_framework "Pods-EasyHue/RxDataSources.framework"
+  install_framework "Pods-EasyHue/RxOptional.framework"
   install_framework "Pods-EasyHue/RxSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -99,5 +101,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-EasyHue/RealmSwift.framework"
   install_framework "Pods-EasyHue/RxBlocking.framework"
   install_framework "Pods-EasyHue/RxCocoa.framework"
+  install_framework "Pods-EasyHue/RxDataSources.framework"
+  install_framework "Pods-EasyHue/RxOptional.framework"
   install_framework "Pods-EasyHue/RxSwift.framework"
 fi

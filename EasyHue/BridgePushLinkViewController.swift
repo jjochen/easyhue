@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class BridgePushLinkViewController: UIViewController
+class BridgePushLinkViewController: ViewController
 {
     internal var viewModel: BridgePushLinkViewModel?
     private var disposeBag = DisposeBag()
