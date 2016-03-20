@@ -15,6 +15,12 @@
 		190E5AE41C9ED7BD009FBD95 /* BridgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */; };
 		190E5AE51C9ED7E1009FBD95 /* BridgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */; };
 		190E5AE61C9ED7E1009FBD95 /* BridgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */; };
+		190E5AE81C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE71C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift */; };
+		190E5AE91C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE71C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift */; };
+		190E5AEC1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AEB1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift */; };
+		190E5AED1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AEB1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift */; };
+		190E5AEF1C9EF317009FBD95 /* PHHueSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AEE1C9EF317009FBD95 /* PHHueSDK+Rx.swift */; };
+		190E5AF01C9EF317009FBD95 /* PHHueSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AEE1C9EF317009FBD95 /* PHHueSDK+Rx.swift */; };
 		191C071E1C7E108200AE69D3 /* BridgePushLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C071D1C7E108200AE69D3 /* BridgePushLinkViewController.swift */; };
 		191C07211C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C07201C7F770900AE69D3 /* BridgePushLinkViewModel.swift */; };
 		191C07221C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C07201C7F770900AE69D3 /* BridgePushLinkViewModel.swift */; };
@@ -35,7 +41,7 @@
 		19BC783B1C7C696000783244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BC78391C7C696000783244 /* Main.storyboard */; };
 		19BC783D1C7C696000783244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19BC783C1C7C696000783244 /* Assets.xcassets */; };
 		19BC78401C7C696000783244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BC783E1C7C696000783244 /* LaunchScreen.storyboard */; };
-		19BC784B1C7C696000783244 /* HueSDKClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC784A1C7C696000783244 /* HueSDKClientTests.swift */; };
+		19BC784B1C7C696000783244 /* BridgeSelectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC784A1C7C696000783244 /* BridgeSelectionViewModelTests.swift */; };
 		19BC78561C7C696000783244 /* EasyHueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC78551C7C696000783244 /* EasyHueUITests.swift */; };
 		B35C5D127B41CD3EC866491D /* Pods_EasyHueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4707E47F35260ED30E75B363 /* Pods_EasyHueTests.framework */; };
 		E3371C7767A98A03B7055E5F /* Pods_EasyHueUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAA024DE1CFCAE8870D46DF /* Pods_EasyHueUITests.framework */; };
@@ -61,6 +67,9 @@
 /* Begin PBXFileReference section */
 		190E5ADE1C9EC03C009FBD95 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeInfo.swift; sourceTree = "<group>"; };
+		190E5AE71C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHBridgeSearchingProtocol.swift; sourceTree = "<group>"; };
+		190E5AEB1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHHueSDKProtocol.swift; sourceTree = "<group>"; };
+		190E5AEE1C9EF317009FBD95 /* PHHueSDK+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHHueSDK+Rx.swift"; sourceTree = "<group>"; };
 		191C07131C7CB04C00AE69D3 /* EasyHue-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyHue-Bridging-Header.h"; sourceTree = "<group>"; };
 		191C07141C7CB04C00AE69D3 /* EasyHueTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EasyHueTests-Bridging-Header.h"; path = "../EasyHue/EasyHueTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		191C07151C7CB04C00AE69D3 /* EasyHueUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EasyHueUITests-Bridging-Header.h"; path = "../EasyHue/EasyHueUITests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -80,7 +89,7 @@
 		19BC783F1C7C696000783244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19BC78411C7C696000783244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19BC78461C7C696000783244 /* EasyHueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyHueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		19BC784A1C7C696000783244 /* HueSDKClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueSDKClientTests.swift; sourceTree = "<group>"; };
+		19BC784A1C7C696000783244 /* BridgeSelectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewModelTests.swift; sourceTree = "<group>"; };
 		19BC784C1C7C696000783244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19BC78511C7C696000783244 /* EasyHueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyHueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BC78551C7C696000783244 /* EasyHueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyHueUITests.swift; sourceTree = "<group>"; };
@@ -122,6 +131,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		190E5AEA1C9EF079009FBD95 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				190E5AE71C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift */,
+				190E5AEB1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		191C071F1C7F768F00AE69D3 /* BridgePushLink */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				194390521C9E0E260029DD0C /* PHBridgeSearching+Rx.swift */,
+				190E5AEE1C9EF317009FBD95 /* PHHueSDK+Rx.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +220,7 @@
 				190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */,
 				1943903B1C9D7F070029DD0C /* Bridge Selection */,
 				191C071F1C7F768F00AE69D3 /* BridgePushLink */,
+				190E5AEA1C9EF079009FBD95 /* Protocols */,
 				1943904D1C9DF88F0029DD0C /* Extensions */,
 				191C07241C80417E00AE69D3 /* Services */,
 				191C07231C803FE300AE69D3 /* Resources */,
@@ -212,7 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				191C07141C7CB04C00AE69D3 /* EasyHueTests-Bridging-Header.h */,
-				19BC784A1C7C696000783244 /* HueSDKClientTests.swift */,
+				19BC784A1C7C696000783244 /* BridgeSelectionViewModelTests.swift */,
 				19BC784C1C7C696000783244 /* Info.plist */,
 			);
 			path = EasyHueTests;
@@ -522,6 +542,9 @@
 				190E5AE41C9ED7BD009FBD95 /* BridgeInfo.swift in Sources */,
 				194390411C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */,
 				194390531C9E0E260029DD0C /* PHBridgeSearching+Rx.swift in Sources */,
+				190E5AEC1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift in Sources */,
+				190E5AE81C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift in Sources */,
+				190E5AEF1C9EF317009FBD95 /* PHHueSDK+Rx.swift in Sources */,
 				194390461C9D800F0029DD0C /* ViewController.swift in Sources */,
 				191C07211C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */,
 			);
@@ -531,10 +554,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				190E5AF01C9EF317009FBD95 /* PHHueSDK+Rx.swift in Sources */,
+				190E5AE91C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift in Sources */,
 				194390541C9E0E260029DD0C /* PHBridgeSearching+Rx.swift in Sources */,
-				19BC784B1C7C696000783244 /* HueSDKClientTests.swift in Sources */,
+				19BC784B1C7C696000783244 /* BridgeSelectionViewModelTests.swift in Sources */,
 				190E5AE01C9EC03C009FBD95 /* ActivityIndicator.swift in Sources */,
 				191C07221C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */,
+				190E5AED1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift in Sources */,
 				190E5AE51C9ED7E1009FBD95 /* BridgeInfo.swift in Sources */,
 				194390421C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */,
 				191C07271C81B68900AE69D3 /* AppViewModel.swift in Sources */,

@@ -27,7 +27,8 @@ class AppViewModel : ViewModel
     // MARK: - View Models
     
     func brideSelectionViewModel() -> BridgeSelectionViewModel {
-        return BridgeSelectionViewModel(hueSDK: self.hueSDK)
+        let bridgeSearch = PHBridgeSearching(upnpSearch: true, andPortalSearch: true, andIpAdressSearch: true)
+        return BridgeSelectionViewModel(hueSDK: self.hueSDK, bridgeSearch: bridgeSearch)
     }
     
 }

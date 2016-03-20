@@ -14,21 +14,19 @@ import RxCocoa
 internal class BridgeSelectionViewModel: ViewModel
 {
     // MARK: Input
-    let hueSDK: PHHueSDK
+    let hueSDK: PHHueSDKProtocol
+    let bridgeSearch: PHBridgeSearchingProtocol
     
     // MARK: Output
     internal let availableBridges: Driver<[BridgeInfo]>
     internal let loading: Driver<Bool>
     
-    // MARK: Variables
-    
-    private let bridgeSearch = PHBridgeSearching(upnpSearch: true, andPortalSearch: true, andIpAdressSearch: true)
-    
     
     // MARK: - Livecycle
     
-    init(hueSDK: PHHueSDK) {
+    init(hueSDK: PHHueSDKProtocol, bridgeSearch: PHBridgeSearchingProtocol) {
         self.hueSDK = hueSDK
+        self.bridgeSearch = bridgeSearch
         
         let loading = ActivityIndicator()
         self.loading = loading.asDriver()

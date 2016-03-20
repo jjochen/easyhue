@@ -43,7 +43,7 @@ class BridgeSelectionViewController: ViewController {
         tableView
             .rx_modelSelected(BridgeInfo)
             .subscribeNext { bridgeInfo in
-                
+                print("\(bridgeInfo)")
             }
             .addDisposableTo(disposeBag)
 
