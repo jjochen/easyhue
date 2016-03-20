@@ -7,13 +7,11 @@
 //
 
 import XCTest
-import Nimble
-import RxTests
 @testable import EasyHue
 
 class BridgeSelectionViewModelTests: XCTestCase {
     
-    var sut: BridgeSelectionViewModel?
+    var sut: BridgeSelectionViewModel!
     
     override func setUp() {
         super.setUp()

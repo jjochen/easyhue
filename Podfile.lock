@@ -19,10 +19,6 @@ PODS:
   - RxDataSources (0.6.1):
     - RxCocoa (~> 2.2)
     - RxSwift (~> 2.2)
-  - RxNimble (0.1.0):
-    - Nimble (~> 3.0)
-    - RxBlocking (~> 2.0)
-    - RxSwift (~> 2.0)
   - RxOptional (2.0.0):
     - RxCocoa (~> 2.0)
     - RxSwift (~> 2.0)
@@ -38,7 +34,6 @@ DEPENDENCIES:
   - RxBlocking (~> 2.0)
   - RxCocoa (~> 2.0)
   - RxDataSources (~> 0.6)
-  - RxNimble (~> 0.1)
   - RxOptional (~> 2.0)
   - RxSwift (~> 2.0)
   - RxTests (~> 2.0)
@@ -62,7 +57,6 @@ SPEC CHECKSUMS:
   RxBlocking: 4616f93183a76aeee681262377e5c4aca0515b06
   RxCocoa: cde4e993f496d2577bc3ba8b7dc7bf55a4ed809a
   RxDataSources: f201802aa904bcbc17c38b82e92f282df401a0ce
-  RxNimble: e46b03db87084232a33f3c3dade1e2cf147cd44e
   RxOptional: b77fb47a0190213cf8a37c7a2b7fda28160b4563
   RxSwift: 0df59cc5edf28a31dbf83b049220b4b8e76b07c8
   RxTests: 321381af540a52281f90f89c066e25c8f42d18fa

@@ -1,6 +1,0 @@
-framework module Pods_EasyHue {
-  umbrella header "Pods-EasyHue-umbrella.h"
-
-  export *
-  module * { export * }
-}
