@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import SVProgressHUD
 
 class BridgeSelectionViewController: ViewController {
     
@@ -32,31 +33,29 @@ class BridgeSelectionViewController: ViewController {
     
     private func setupBindings()
     {
-
         viewModel?.availableBridges
-            .drive(tableView.rx_itemsWithCellIdentifier("BridgeCell", cellType: UITableViewCell.self)) { (_, bridge, cell) in
-                cell.textLabel?.text = bridge.id
-                cell.detailTextLabel?.text = bridge.ip
+            .drive(tableView.rx_itemsWithCellIdentifier("BridgeCell", cellType: UITableViewCell.self)) { (_, bridgeInfo, cell) in
+                cell.textLabel?.text = bridgeInfo.id
+                cell.detailTextLabel?.text = bridgeInfo.ip
             }
             .addDisposableTo(disposeBag)
         
         tableView
             .rx_modelSelected(BridgeInfo)
-            .subscribeNext { bridge in
-                print("\(bridge.id)")
+            .subscribeNext { bridgeInfo in
+                
             }
             .addDisposableTo(disposeBag)
 
-//        viewModel?.loading
-//            .driveNext { loading in
-//                if loading {
-//                    HUD.show(.Progress)
-//                }
-//                else if HUD.isVisible {
-//                    HUD.hide()
-//                }
-//            }
-//            .addDisposableTo(disposeBag)
+        viewModel?.loading
+            .driveNext { loading in
+                if loading {
+                    SVProgressHUD.showWithStatus("Searching for Bridges...")
+                }
+                else {
+                    SVProgressHUD.dismiss()
+                }
+            }
+            .addDisposableTo(disposeBag)
     }
-    
 }

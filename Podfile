@@ -14,7 +14,7 @@ target 'EasyHue' do
     pod 'RxOptional', '~> 2.0'
     pod 'RxDataSources', '~> 0.6'
     pod 'RealmSwift', '~> 0.98'
-    pod 'PKHUD', '~> 3.1'
+    pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
 end
 
 target 'EasyHueTests' do

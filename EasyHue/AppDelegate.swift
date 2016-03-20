@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import PKHUD
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,21 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
-        self.hueSDK.startUpSDK()
-        self.hueSDK.enableLogging(false)
-        self.viewModel = AppViewModel(hueSDK: self.hueSDK)
-        
+        self.configureAppearence()
+        self.setupViewModel()
         self.setupBindings()
-        
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let bridgeSelectionViewController: BridgeSelectionViewController = storyboard.instantiateViewControllerWithIdentifier("BridgeSelection") as! BridgeSelectionViewController
-        bridgeSelectionViewController.viewModel = self.viewModel?.brideSelectionViewModel()
-        
-        self.window?.rootViewController = bridgeSelectionViewController
-        self.window?.makeKeyAndVisible()
-        
+        self.setupRootViewController()
+
         return true
     }
 
@@ -58,11 +48,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     
-    // MARK: - Bindings
+    // MARK: - View Model / Bindings
     
-    private func setupBindings()
-    {
+    private func setupRootViewController() {
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let bridgeSelectionViewController: BridgeSelectionViewController = storyboard.instantiateViewControllerWithIdentifier("BridgeSelection") as! BridgeSelectionViewController
+        bridgeSelectionViewController.viewModel = self.viewModel?.brideSelectionViewModel()
+        
+        self.window?.rootViewController = bridgeSelectionViewController
+        self.window?.makeKeyAndVisible()
+        
+    }
+    
+    private func setupViewModel() {
+        self.hueSDK.startUpSDK()
+        self.hueSDK.enableLogging(false)
+        self.viewModel = AppViewModel(hueSDK: self.hueSDK)
+    }
+    
+    private func setupBindings() {
 
     }
     
+    // MARK: - Appearence 
+    
+    private func configureAppearence() {
+        SVProgressHUD.setDefaultMaskType(.Clear)
+        SVProgressHUD.setBackgroundColor(UIColor(white: 0, alpha: 0.4))
+        SVProgressHUD.setForegroundColor(UIColor(white: 1, alpha: 0.9))
+    }
 }

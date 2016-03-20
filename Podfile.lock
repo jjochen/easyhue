@@ -7,7 +7,6 @@ PODS:
   - Nimble (3.2.0)
   - PhilipsHueSDK-iOS (1.11.2):
     - CocoaLumberjack (~> 1.8)
-  - PKHUD (3.1.0)
   - Realm (0.98.5):
     - Realm/Headers (= 0.98.5)
   - Realm/Headers (0.98.5)
@@ -30,11 +29,11 @@ PODS:
   - RxSwift (2.3.0)
   - RxTests (2.3.0):
     - RxSwift (~> 2.3)
+  - SVProgressHUD (2.0-beta8)
 
 DEPENDENCIES:
   - Nimble (~> 3.2)
   - PhilipsHueSDK-iOS
-  - PKHUD (~> 3.1)
   - RealmSwift (~> 0.98)
   - RxBlocking (~> 2.0)
   - RxCocoa (~> 2.0)
@@ -43,12 +42,21 @@ DEPENDENCIES:
   - RxOptional (~> 2.0)
   - RxSwift (~> 2.0)
   - RxTests (~> 2.0)
+  - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+
+EXTERNAL SOURCES:
+  SVProgressHUD:
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  SVProgressHUD:
+    :commit: 2241d428ac866e6603388430aac83902a01b111c
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 628fca2e88ef06f7cf6817309aa405f325d9a6fa
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   PhilipsHueSDK-iOS: dc7a46c819347b6895923960df1c9a6b4aa25cd6
-  PKHUD: 4167eccdb1b3a892fd80ce2b51cb6ba412a889ab
   Realm: db08379969e45cea2edd1c3c0a090fe9e22d2d2f
   RealmSwift: cb11ad1c35e15dc982f2dbf5afe2a3124193a358
   RxBlocking: 4616f93183a76aeee681262377e5c4aca0515b06
@@ -58,5 +66,6 @@ SPEC CHECKSUMS:
   RxOptional: b77fb47a0190213cf8a37c7a2b7fda28160b4563
   RxSwift: 0df59cc5edf28a31dbf83b049220b4b8e76b07c8
   RxTests: 321381af540a52281f90f89c066e25c8f42d18fa
+  SVProgressHUD: 6e48a1dda09ce3b58adc41d013baed3a8e8980ff
 
 COCOAPODS: 0.39.0

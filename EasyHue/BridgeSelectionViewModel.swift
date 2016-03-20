@@ -17,8 +17,8 @@ internal class BridgeSelectionViewModel: ViewModel
     let hueSDK: PHHueSDK
     
     // MARK: Output
-    internal let availableBridges: Driver<Array<BridgeInfo>>
-//    internal let loading: Driver<Bool>
+    internal let availableBridges: Driver<[BridgeInfo]>
+    internal let loading: Driver<Bool>
     
     // MARK: Variables
     
@@ -29,8 +29,13 @@ internal class BridgeSelectionViewModel: ViewModel
     
     init(hueSDK: PHHueSDK) {
         self.hueSDK = hueSDK
-        self.availableBridges = self.bridgeSearch.rx_startSearch().asDriver(onErrorJustReturn: [])
         
+        let loading = ActivityIndicator()
+        self.loading = loading.asDriver()
+        
+        let availableBridges: Observable<[BridgeInfo]> = bridgeSearch.rx_startSearch()
+            .trackActivity(loading)
+        self.availableBridges = availableBridges.asDriver(onErrorJustReturn: [])
     }
     
 }

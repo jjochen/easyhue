@@ -38,6 +38,9 @@ internal class BridgePushLinkViewModel: ViewModel
         hueSDK.startPushlinkAuthentication()
     }
     
+    
+    // TODO: handle notifications with rx bindings
+    
     // MARK: Notifications
     private func registerForNotifications()
     {
