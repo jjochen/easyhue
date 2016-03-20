@@ -26,6 +26,12 @@
 		1943904A1C9D80490029DD0C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390491C9D80490029DD0C /* ViewModel.swift */; };
 		1943904B1C9D80490029DD0C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390491C9D80490029DD0C /* ViewModel.swift */; };
 		1943904C1C9D80490029DD0C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390491C9D80490029DD0C /* ViewModel.swift */; };
+		1943904F1C9DF8C30029DD0C /* RxBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943904E1C9DF8C30029DD0C /* RxBindings.swift */; };
+		194390501C9DF8C30029DD0C /* RxBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943904E1C9DF8C30029DD0C /* RxBindings.swift */; };
+		194390511C9DF8C30029DD0C /* RxBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943904E1C9DF8C30029DD0C /* RxBindings.swift */; };
+		194390531C9E0E260029DD0C /* PHHueSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390521C9E0E260029DD0C /* PHHueSDK+Rx.swift */; };
+		194390541C9E0E260029DD0C /* PHHueSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390521C9E0E260029DD0C /* PHHueSDK+Rx.swift */; };
+		194390551C9E0E260029DD0C /* PHHueSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390521C9E0E260029DD0C /* PHHueSDK+Rx.swift */; };
 		19BC78341C7C696000783244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC78331C7C696000783244 /* AppDelegate.swift */; };
 		19BC783B1C7C696000783244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BC78391C7C696000783244 /* Main.storyboard */; };
 		19BC783D1C7C696000783244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19BC783C1C7C696000783244 /* Assets.xcassets */; };
@@ -65,6 +71,8 @@
 		194390401C9D7F790029DD0C /* BridgeSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewModel.swift; sourceTree = "<group>"; };
 		194390451C9D800F0029DD0C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		194390491C9D80490029DD0C /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		1943904E1C9DF8C30029DD0C /* RxBindings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxBindings.swift; sourceTree = "<group>"; };
+		194390521C9E0E260029DD0C /* PHHueSDK+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHHueSDK+Rx.swift"; sourceTree = "<group>"; };
 		19BC78301C7C696000783244 /* EasyHue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyHue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BC78331C7C696000783244 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19BC783A1C7C696000783244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,6 +169,15 @@
 			name = Superclasses;
 			sourceTree = "<group>";
 		};
+		1943904D1C9DF88F0029DD0C /* RxBindings */ = {
+			isa = PBXGroup;
+			children = (
+				1943904E1C9DF8C30029DD0C /* RxBindings.swift */,
+				194390521C9E0E260029DD0C /* PHHueSDK+Rx.swift */,
+			);
+			name = RxBindings;
+			sourceTree = "<group>";
+		};
 		19BC78271C7C696000783244 = {
 			isa = PBXGroup;
 			children = (
@@ -188,9 +205,10 @@
 			children = (
 				19BC78331C7C696000783244 /* AppDelegate.swift */,
 				191C07251C81B68900AE69D3 /* AppViewModel.swift */,
-				194390441C9D7FD70029DD0C /* Superclasses */,
 				1943903B1C9D7F070029DD0C /* Bridge Selection */,
 				191C071F1C7F768F00AE69D3 /* BridgePushLink */,
+				194390441C9D7FD70029DD0C /* Superclasses */,
+				1943904D1C9DF88F0029DD0C /* RxBindings */,
 				191C07241C80417E00AE69D3 /* Helper */,
 				191C07231C803FE300AE69D3 /* Resources */,
 			);
@@ -505,10 +523,12 @@
 				191C07261C81B68900AE69D3 /* AppViewModel.swift in Sources */,
 				1943904A1C9D80490029DD0C /* ViewModel.swift in Sources */,
 				19BC78341C7C696000783244 /* AppDelegate.swift in Sources */,
+				1943904F1C9DF8C30029DD0C /* RxBindings.swift in Sources */,
 				1943903D1C9D7F600029DD0C /* BridgeSelectionViewController.swift in Sources */,
 				191C071C1C7CE68900AE69D3 /* HueSDKClient.swift in Sources */,
 				191C071E1C7E108200AE69D3 /* BridgePushLinkViewController.swift in Sources */,
 				194390411C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */,
+				194390531C9E0E260029DD0C /* PHHueSDK+Rx.swift in Sources */,
 				194390461C9D800F0029DD0C /* ViewController.swift in Sources */,
 				191C07211C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */,
 			);
@@ -520,7 +540,9 @@
 			files = (
 				194390471C9D800F0029DD0C /* ViewController.swift in Sources */,
 				1943903E1C9D7F600029DD0C /* BridgeSelectionViewController.swift in Sources */,
+				194390541C9E0E260029DD0C /* PHHueSDK+Rx.swift in Sources */,
 				19BC784B1C7C696000783244 /* HueSDKClientTests.swift in Sources */,
+				194390501C9DF8C30029DD0C /* RxBindings.swift in Sources */,
 				191C07221C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */,
 				194390421C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */,
 				191C07271C81B68900AE69D3 /* AppViewModel.swift in Sources */,
@@ -533,6 +555,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1943904C1C9D80490029DD0C /* ViewModel.swift in Sources */,
+				194390551C9E0E260029DD0C /* PHHueSDK+Rx.swift in Sources */,
+				194390511C9DF8C30029DD0C /* RxBindings.swift in Sources */,
 				1943903F1C9D7F600029DD0C /* BridgeSelectionViewController.swift in Sources */,
 				19BC78561C7C696000783244 /* EasyHueUITests.swift in Sources */,
 				194390481C9D800F0029DD0C /* ViewController.swift in Sources */,

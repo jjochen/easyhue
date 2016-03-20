@@ -17,32 +17,19 @@ internal class BridgeSelectionViewModel: ViewModel
     let hueSDK: PHHueSDK
     
     // MARK: Output
-    private let _availableBridges = Variable<[NSObject : AnyObject]>([:])
-    internal var availableBridges: Driver<[NSObject : AnyObject]> {
-        return _availableBridges.asDriver()
-    }
-    
+    internal let availableBridges: Driver<Array<BridgeInfo>>
+//    internal let loading: Driver<Bool>
     
     // MARK: Variables
     
-    private var _bridgeSearch: PHBridgeSearching?
+    private let bridgeSearch = PHBridgeSearching(upnpSearch: true, andPortalSearch: true, andIpAdressSearch: true)
     
     
     // MARK: - Livecycle
     
     init(hueSDK: PHHueSDK) {
         self.hueSDK = hueSDK
-    }
-    
-    
-    // MARK: - Bridges
-    
-    internal func searchForBridgeLocal()
-    {
-        _bridgeSearch = PHBridgeSearching(upnpSearch: true, andPortalSearch: true, andIpAdressSearch: true)
-        _bridgeSearch!.startSearchWithCompletionHandler { (bridgesFound: [NSObject : AnyObject]!) -> Void in
-            self._availableBridges.value = bridgesFound
-        }
+        self.availableBridges = self.bridgeSearch.rx_startSearch().asDriver(onErrorJustReturn: [])
         
     }
     

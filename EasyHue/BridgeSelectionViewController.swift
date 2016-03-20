@@ -28,24 +28,35 @@ class BridgeSelectionViewController: ViewController {
         setupBindings()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        viewModel?.searchForBridgeLocal()
-    }
-    
     // MARK: - Bindings
     
     private func setupBindings()
     {
+
         viewModel?.availableBridges
-            .drive(tableView.rx_itemsWithCellIdentifier("BridgeCell", cellType: UITableViewCell.self)) { (_, element, cell) in
-                cell.textLabel?.text = element.0.description
-                cell.detailTextLabel?.text = element.1.description
+            .drive(tableView.rx_itemsWithCellIdentifier("BridgeCell", cellType: UITableViewCell.self)) { (_, bridge, cell) in
+                cell.textLabel?.text = bridge.id
+                cell.detailTextLabel?.text = bridge.ip
             }
             .addDisposableTo(disposeBag)
         
+        tableView
+            .rx_modelSelected(BridgeInfo)
+            .subscribeNext { bridge in
+                print("\(bridge.id)")
+            }
+            .addDisposableTo(disposeBag)
 
+//        viewModel?.loading
+//            .driveNext { loading in
+//                if loading {
+//                    HUD.show(.Progress)
+//                }
+//                else if HUD.isVisible {
+//                    HUD.hide()
+//                }
+//            }
+//            .addDisposableTo(disposeBag)
     }
     
 }
