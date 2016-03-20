@@ -92,6 +92,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/RxOptional.framework"
   install_framework "Pods/RxSwift.framework"
   install_framework "Pods/SVProgressHUD.framework"
+  install_framework "Pods/SnapKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/CocoaLumberjack.framework"
@@ -102,4 +103,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/RxOptional.framework"
   install_framework "Pods/RxSwift.framework"
   install_framework "Pods/SVProgressHUD.framework"
+  install_framework "Pods/SnapKit.framework"
 fi

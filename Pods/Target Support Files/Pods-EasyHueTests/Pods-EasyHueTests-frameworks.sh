@@ -92,7 +92,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-EasyHueTests/RxOptional.framework"
   install_framework "Pods-EasyHueTests/RxSwift.framework"
   install_framework "Pods-EasyHueTests/SVProgressHUD.framework"
+  install_framework "Pods-EasyHueTests/SnapKit.framework"
   install_framework "Pods-EasyHueTests/Nimble.framework"
+  install_framework "Pods-EasyHueTests/Quick.framework"
   install_framework "Pods-EasyHueTests/RxBlocking.framework"
   install_framework "Pods-EasyHueTests/RxTests.framework"
 fi
@@ -105,7 +107,9 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-EasyHueTests/RxOptional.framework"
   install_framework "Pods-EasyHueTests/RxSwift.framework"
   install_framework "Pods-EasyHueTests/SVProgressHUD.framework"
+  install_framework "Pods-EasyHueTests/SnapKit.framework"
   install_framework "Pods-EasyHueTests/Nimble.framework"
+  install_framework "Pods-EasyHueTests/Quick.framework"
   install_framework "Pods-EasyHueTests/RxBlocking.framework"
   install_framework "Pods-EasyHueTests/RxTests.framework"
 fi

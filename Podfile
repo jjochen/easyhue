@@ -13,9 +13,11 @@ pod 'RxOptional', '~> 2.0'
 pod 'RxDataSources', '~> 0.6'
 pod 'RealmSwift', '~> 0.98'
 pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
+pod 'SnapKit', '~> 0.19'
 
 
 target 'EasyHueTests' do
+    pod 'Quick', '~> 0.9'
     pod 'Nimble', '~> 3.2'
     pod 'RxTests', '~> 2.0'
     #pod 'RxNimble', '~> 0.1'
