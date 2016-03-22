@@ -289,7 +289,7 @@
 		19BC78281C7C696000783244 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = EH;
+				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Jochen Pfeiffer";
