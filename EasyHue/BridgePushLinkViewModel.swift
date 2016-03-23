@@ -45,11 +45,11 @@ internal class BridgePushLinkViewModel: ViewModel
     private func registerForNotifications()
     {
         let notificationManager = PHNotificationManager.defaultManager();
-        notificationManager.registerObject(self, withSelector:Selector("authenticationSuccess:"), forNotification:PUSHLINK_LOCAL_AUTHENTICATION_SUCCESS_NOTIFICATION)
-        notificationManager.registerObject(self, withSelector:Selector("authenticationFailed:"), forNotification:PUSHLINK_LOCAL_AUTHENTICATION_FAILED_NOTIFICATION)
-        notificationManager.registerObject(self, withSelector:Selector("noLocalConnection:"), forNotification:PUSHLINK_NO_LOCAL_CONNECTION_NOTIFICATION)
-        notificationManager.registerObject(self, withSelector:Selector("noLocalBridge:"), forNotification:PUSHLINK_NO_LOCAL_BRIDGE_KNOWN_NOTIFICATION)
-        notificationManager.registerObject(self, withSelector:Selector("buttonNotPressed:"), forNotification:PUSHLINK_BUTTON_NOT_PRESSED_NOTIFICATION)
+        notificationManager.registerObject(self, withSelector:#selector(authenticationSuccess), forNotification:PUSHLINK_LOCAL_AUTHENTICATION_SUCCESS_NOTIFICATION)
+        notificationManager.registerObject(self, withSelector:#selector(authenticationFailed), forNotification:PUSHLINK_LOCAL_AUTHENTICATION_FAILED_NOTIFICATION)
+        notificationManager.registerObject(self, withSelector:#selector(noLocalConnection), forNotification:PUSHLINK_NO_LOCAL_CONNECTION_NOTIFICATION)
+        notificationManager.registerObject(self, withSelector:#selector(noLocalBridge), forNotification:PUSHLINK_NO_LOCAL_BRIDGE_KNOWN_NOTIFICATION)
+        notificationManager.registerObject(self, withSelector:#selector(buttonNotPressed), forNotification:PUSHLINK_BUTTON_NOT_PRESSED_NOTIFICATION)
     }
     
     func deregisterForNotifications()

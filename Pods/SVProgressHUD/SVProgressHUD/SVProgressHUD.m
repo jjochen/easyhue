@@ -155,6 +155,10 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
     [self sharedView].backgroundColor = color;
 }
 
++ (void)setBackgroundLayerColor:(UIColor *)color {
+    [self sharedView].backgroundLayerColor = color;
+}
+
 + (void)setInfoImage:(UIImage*)image {
     [self sharedView].infoImage = image;
 }
@@ -173,6 +177,14 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
 
 + (void)setMinimumDismissTimeInterval:(NSTimeInterval)interval {
     [self sharedView].minimumDismissTimeInterval = interval;
+}
+
++ (void)setFadeInAnimationDuration:(NSTimeInterval)duration {
+    [self sharedView].fadeInAnimationDuration = duration;
+}
+
++ (void)setFadeOutAnimationDuration:(NSTimeInterval)duration {
+    [self sharedView].fadeOutAnimationDuration = duration;
 }
 
 
@@ -288,7 +300,9 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
 }
 
 + (void)dismissWithDelay:(NSTimeInterval)delay {
-    [SVProgressHUD dismissWithDuration:SVProgressHUDDefaultAnimationDuration delay:delay];
+    if([self isVisible]) {
+        [[self sharedView] dismissWithDelay:delay];
+    }
 }
 
 + (void)dismissWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay {
@@ -318,6 +332,8 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
         self.userInteractionEnabled = NO;
         _backgroundColor = [UIColor clearColor];
         _foregroundColor = [UIColor blackColor];
+        _backgroundLayerColor = [UIColor colorWithWhite:0 alpha:0.4];
+        
         self.alpha = 0.0f;
         self.activityCount = 0;
         
@@ -357,6 +373,9 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
         _cornerRadius = 14.0f;
         
         _minimumDismissTimeInterval = 5.0;
+
+        _fadeInAnimationDuration = SVProgressHUDDefaultAnimationDuration;
+        _fadeOutAnimationDuration = SVProgressHUDDefaultAnimationDuration;
         
         // Accessibility support
         self.accessibilityIdentifier = @"SVProgressHUD";
@@ -482,11 +501,12 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
         self.backgroundLayer = nil;
     }
     switch (self.defaultMaskType) {
+        case SVProgressHUDMaskTypeCustom:
         case SVProgressHUDMaskTypeBlack:{
             
             self.backgroundLayer = [CALayer layer];
             self.backgroundLayer.frame = self.bounds;
-            self.backgroundLayer.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5].CGColor;
+            self.backgroundLayer.backgroundColor = self.defaultMaskType == SVProgressHUDMaskTypeCustom ? self.backgroundLayerColor.CGColor : [UIColor colorWithWhite:0 alpha:0.4].CGColor;
             [self.backgroundLayer setNeedsDisplay];
             
             [self.layer insertSublayer:self.backgroundLayer atIndex:0];
@@ -633,11 +653,6 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
                                              selector:@selector(positionHUD:)
                                                  name:UIApplicationDidChangeStatusBarOrientationNotification
                                                object:nil];
-#endif
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(positionHUD:)
-                                                 name:UIApplicationDidBecomeActiveNotification
-                                               object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(positionHUD:)
@@ -657,6 +672,11 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(positionHUD:)
                                                  name:UIKeyboardDidShowNotification
+                                               object:nil];
+#endif
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(positionHUD:)
+                                                 name:UIApplicationDidBecomeActiveNotification
                                                object:nil];
 }
 
@@ -690,6 +710,7 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
     }
 #endif
     
+#if TARGET_OS_IOS
     // Get keyboardHeight in regards to current state
     if(notification) {
         NSDictionary* keyboardInfo = [notification userInfo];
@@ -698,15 +719,15 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
         
         if(notification.name == UIKeyboardWillShowNotification || notification.name == UIKeyboardDidShowNotification) {
             keyboardHeight = CGRectGetWidth(keyboardFrame);
-#if TARGET_OS_IOS
+
             if(ignoreOrientation || UIInterfaceOrientationIsPortrait(orientation)) {
                 keyboardHeight = CGRectGetHeight(keyboardFrame);
             }
-#endif
         }
     } else {
         keyboardHeight = self.visibleKeyboardHeight;
     }
+#endif
     
     // Get the currently active frame of the display (depends on orientation)
     CGRect orientationFrame = self.bounds;
@@ -943,15 +964,13 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
         // Zoom HUD a little to make a nice appear, pop up animation
         self.hudView.transform = CGAffineTransformScale(self.hudView.transform, 1.3, 1.3);
         
-        // Set initial values to handle iOS 7 and 8 UIToolbar which not answers well to hierarchy opacity change
-        if(self.isClear) {
-            self.alpha = 1.0f;
-            self.hudView.alpha = 0.0f;
-        }
+        // Set initial values to handle iOS 7 (and above) UIToolbar which not answers well to hierarchy opacity change
+        self.alpha = 0.0f;
+        self.hudView.alpha = 0.0f;
         
         // Animate appearance
         __weak SVProgressHUD *weakSelf = self;
-        [UIView animateWithDuration:SVProgressHUDDefaultAnimationDuration
+        [UIView animateWithDuration:self.fadeInAnimationDuration
                               delay:0
                             options:(UIViewAnimationOptions) (UIViewAnimationOptionAllowUserInteraction | UIViewAnimationCurveEaseOut | UIViewAnimationOptionBeginFromCurrentState)
                          animations:^{
@@ -959,12 +978,8 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
                              if(strongSelf) {
                                  // Shrink to finish pop up animation
                                  strongSelf.hudView.transform = CGAffineTransformScale(strongSelf.hudView.transform, 1/1.3f, 1/1.3f);
-                                 
-                                 if(strongSelf.isClear) { // handle iOS 7 and 8 UIToolbar which not answers well to hierarchy opacity change
-                                     strongSelf.hudView.alpha = 1.0f;
-                                 } else {
-                                     strongSelf.alpha = 1.0f;
-                                 }
+                                 strongSelf.alpha = 1.0f;
+                                 strongSelf.hudView.alpha = 1.0f;
                              }
                          } completion:^(BOOL finished) {
                              __strong SVProgressHUD *strongSelf = weakSelf;
@@ -988,6 +1003,10 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
     }
 }
 
+- (void)dismissWithDelay:(NSTimeInterval)delay {
+    [self dismissWithDuration:self.fadeOutAnimationDuration delay:delay];
+}
+
 - (void)dismissWithDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay {
     // Dismiss if visible (depending on alpha)
     if(self.alpha != 0.0f || self.hudView.alpha != 0.0f){
@@ -1006,12 +1025,8 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
             __strong SVProgressHUD *strongSelf = weakSelf;
             if(strongSelf){
                 strongSelf.hudView.transform = CGAffineTransformScale(self.hudView.transform, 0.8f, 0.8f);
-                
-                if(strongSelf.isClear){ // handle iOS 7 UIToolbar not answer well to hierarchy opacity change
-                    strongSelf.hudView.alpha = 0.0f;
-                } else{
-                    strongSelf.alpha = 0.0f;
-                }
+                strongSelf.alpha = 0.0f;
+                strongSelf.hudView.alpha = 0.0f;
             }
         };
 
@@ -1019,9 +1034,9 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
             __strong SVProgressHUD *strongSelf = weakSelf;
             if(strongSelf) {
                 // Clean up view hierachy (overlays)
-                [self.overlayView removeFromSuperview];
-                [self.hudView removeFromSuperview];
-                [self removeFromSuperview];
+                [strongSelf.overlayView removeFromSuperview];
+                [strongSelf.hudView removeFromSuperview];
+                [strongSelf removeFromSuperview];
                 
                 
                 // Remove observer <=> we do not have to handle orientation changes etc.
@@ -1063,7 +1078,7 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
 }
 
 - (void)dismiss {
-    [self dismissWithDuration:SVProgressHUDDefaultAnimationDuration delay:0];
+    [self dismissWithDuration:self.fadeOutAnimationDuration delay:0];
 }
 
 
@@ -1170,13 +1185,13 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
 #pragma mark - Utilities
 
 + (BOOL)isVisible {
-    return ([self sharedView].alpha == 1);
+    return ([self sharedView].alpha > 0);
 }
 
 
 #pragma mark - Getters
 + (NSTimeInterval)displayDurationForString:(NSString*)string {
-    return MIN((float)string.length * 0.06 + 0.5, [self sharedView].minimumDismissTimeInterval);
+    return MAX((float)string.length * 0.06 + 0.5, [self sharedView].minimumDismissTimeInterval);
 }
 
 - (UIColor *)foregroundColorForStyle {
@@ -1337,12 +1352,16 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
     if (!_isInitializing) _font = font;
 }
 
+- (void)setForegroundColor:(UIColor *)color {
+    if (!_isInitializing) _foregroundColor = color;
+}
+
 - (void)setBackgroundColor:(UIColor *)color {
     if (!_isInitializing) _backgroundColor = color;
 }
 
-- (void)setForegroundColor:(UIColor *)color {
-    if (!_isInitializing) _foregroundColor = color;
+- (void)setBackgroundLayerColor:(UIColor *)color {
+    if (!_isInitializing) _backgroundLayerColor = color;
 }
 
 - (void)setInfoImage:(UIImage*)image {
@@ -1367,6 +1386,14 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
 
 - (void)setMinimumDismissTimeInterval:(NSTimeInterval)minimumDismissTimeInterval {
     if (!_isInitializing) _minimumDismissTimeInterval = minimumDismissTimeInterval;
+}
+
+- (void)setFadeInAnimationDuration:(NSTimeInterval)duration {
+    if (!_isInitializing) _fadeInAnimationDuration = duration;
+}
+
+- (void)setFadeOutAnimationDuration:(NSTimeInterval)duration  {
+    if (!_isInitializing) _fadeOutAnimationDuration = duration;
 }
 
 @end
