@@ -51,15 +51,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - View Model / Bindings
     
     private func setupRootViewController() {
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let bridgeSelectionViewController: BridgeSelectionViewController = storyboard.instantiateViewControllerWithIdentifier("BridgeSelection") as! BridgeSelectionViewController
+        let bridgeSelectionViewController: BridgeSelectionViewController = UIStoryboard.main().viewControllerWithID(.BridgeSelection) as! BridgeSelectionViewController
         bridgeSelectionViewController.viewModel = self.viewModel?.brideSelectionViewModel()
         
-        self.window?.rootViewController = bridgeSelectionViewController
-        self.window?.makeKeyAndVisible()
-        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window!.rootViewController = bridgeSelectionViewController
+        self.window!.makeKeyAndVisible()
     }
     
     private func setupViewModel() {
