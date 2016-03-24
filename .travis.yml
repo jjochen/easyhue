@@ -6,4 +6,4 @@ cache:
   - bundler
 xcode_workspace: EasyHue.xcworkspace
 xcode_scheme: EasyHue
-xcode_sdk: iphonesimulator9.2
+xcode_sdk: iphonesimulator9.3
