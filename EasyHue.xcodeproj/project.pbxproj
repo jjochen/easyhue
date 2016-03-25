@@ -8,26 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		190E5ADF1C9EC03C009FBD95 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5ADE1C9EC03C009FBD95 /* ActivityIndicator.swift */; };
-		190E5AE01C9EC03C009FBD95 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5ADE1C9EC03C009FBD95 /* ActivityIndicator.swift */; };
 		190E5AE41C9ED7BD009FBD95 /* BridgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */; };
-		190E5AE51C9ED7E1009FBD95 /* BridgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */; };
 		190E5AE81C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE71C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift */; };
-		190E5AE91C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE71C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift */; };
 		190E5AEC1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AEB1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift */; };
-		190E5AED1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AEB1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift */; };
 		190E5AEF1C9EF317009FBD95 /* PHHueSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AEE1C9EF317009FBD95 /* PHHueSDK+Rx.swift */; };
-		190E5AF01C9EF317009FBD95 /* PHHueSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AEE1C9EF317009FBD95 /* PHHueSDK+Rx.swift */; };
 		190E5AF41C9F32D0009FBD95 /* BridgeInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AF31C9F32D0009FBD95 /* BridgeInfoTests.swift */; };
 		191C071E1C7E108200AE69D3 /* BridgePushLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C071D1C7E108200AE69D3 /* BridgePushLinkViewController.swift */; };
 		191C07211C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C07201C7F770900AE69D3 /* BridgePushLinkViewModel.swift */; };
-		191C07221C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C07201C7F770900AE69D3 /* BridgePushLinkViewModel.swift */; };
 		191C07261C81B68900AE69D3 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C07251C81B68900AE69D3 /* AppViewModel.swift */; };
-		191C07271C81B68900AE69D3 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C07251C81B68900AE69D3 /* AppViewModel.swift */; };
 		1943903D1C9D7F600029DD0C /* BridgeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943903C1C9D7F600029DD0C /* BridgeSelectionViewController.swift */; };
 		194390411C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390401C9D7F790029DD0C /* BridgeSelectionViewModel.swift */; };
-		194390421C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390401C9D7F790029DD0C /* BridgeSelectionViewModel.swift */; };
 		194390531C9E0E260029DD0C /* PHBridgeSearching+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390521C9E0E260029DD0C /* PHBridgeSearching+Rx.swift */; };
-		194390541C9E0E260029DD0C /* PHBridgeSearching+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390521C9E0E260029DD0C /* PHBridgeSearching+Rx.swift */; };
 		1976B4E31CA2D35000D510EC /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4E21CA2D35000D510EC /* UIStoryboard+Extensions.swift */; };
 		1976B4E71CA2D94400D510EC /* StoryboardIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4E61CA2D94400D510EC /* StoryboardIdentifiers.swift */; };
 		1976B4EA1CA48A3E00D510EC /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4E91CA48A3E00D510EC /* AppViewController.swift */; };
@@ -166,7 +157,6 @@
 			children = (
 				1943903C1C9D7F600029DD0C /* BridgeSelectionViewController.swift */,
 				194390401C9D7F790029DD0C /* BridgeSelectionViewModel.swift */,
-				190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */,
 			);
 			name = "Bridge Selection";
 			sourceTree = "<group>";
@@ -181,6 +171,14 @@
 				1976B4F11CA4A93000D510EC /* UIViewController+Extensions.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		1968B2111CA5D2820083B3B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		1976B4E11CA2D1E500D510EC /* Storryboards */ = {
@@ -227,6 +225,7 @@
 		19BC78321C7C696000783244 /* EasyHue */ = {
 			isa = PBXGroup;
 			children = (
+				1968B2111CA5D2820083B3B6 /* Models */,
 				1976B4E81CA48A2900D510EC /* App */,
 				1943903B1C9D7F070029DD0C /* Bridge Selection */,
 				191C071F1C7F768F00AE69D3 /* BridgePushLink */,
@@ -497,17 +496,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				190E5AF01C9EF317009FBD95 /* PHHueSDK+Rx.swift in Sources */,
-				190E5AE91C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift in Sources */,
-				194390541C9E0E260029DD0C /* PHBridgeSearching+Rx.swift in Sources */,
 				19BC784B1C7C696000783244 /* BridgeSelectionViewModelTests.swift in Sources */,
 				190E5AF41C9F32D0009FBD95 /* BridgeInfoTests.swift in Sources */,
-				190E5AE01C9EC03C009FBD95 /* ActivityIndicator.swift in Sources */,
-				191C07221C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */,
-				190E5AED1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift in Sources */,
-				190E5AE51C9ED7E1009FBD95 /* BridgeInfo.swift in Sources */,
-				194390421C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */,
-				191C07271C81B68900AE69D3 /* AppViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
