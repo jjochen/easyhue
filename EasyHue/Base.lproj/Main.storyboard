@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HEK-uk-KqU">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--App View Controller-->
+        <scene sceneID="8TG-CB-cQN">
+            <objects>
+                <viewController storyboardIdentifier="AppViewController" title="Easy Hue" id="HEK-uk-KqU" userLabel="App View Controller" customClass="AppViewController" customModule="EasyHue" customModuleProvider="target" sceneMemberID="viewController">
+                    <containerView key="view" opaque="NO" contentMode="scaleToFill" id="dt4-Pt-Ij5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <connections>
+                            <segue destination="0wU-jw-jJa" kind="embed" identifier="Show Bridge Selection" id="b1I-Sn-56i"/>
+                        </connections>
+                    </containerView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZe-6M-G2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="485" y="540"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XOq-zS-bCX">
+            <objects>
+                <navigationController id="0wU-jw-jJa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gbo-MZ-ki2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7xU-Qb-AhI" kind="relationship" relationship="rootViewController" id="ZHM-Ch-Mwc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nkh-aU-tfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1222" y="540"/>
+        </scene>
         <!--Bridge Push Link-->
         <scene sceneID="GSK-WE-KFG">
             <objects>
-                <viewController storyboardIdentifier="BridgePushLink" modalTransitionStyle="crossDissolve" modalPresentationStyle="formSheet" id="Gq2-1q-Nen" userLabel="Bridge Push Link" customClass="BridgePushLinkViewController" customModule="EasyHue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BridgePushLinkViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="formSheet" id="Gq2-1q-Nen" userLabel="Bridge Push Link" customClass="BridgePushLinkViewController" customModule="EasyHue" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wyL-u5-PSW"/>
                         <viewControllerLayoutGuide type="bottom" id="t4Y-lc-GR8"/>
@@ -61,12 +93,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fy-Px-cJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="458" y="1245"/>
+            <point key="canvasLocation" x="1994" y="1300"/>
         </scene>
         <!--Bridge Selection-->
         <scene sceneID="ZJW-KB-p2q">
             <objects>
-                <viewController storyboardIdentifier="BridgeSelection" title="Bridge Selection" id="7xU-Qb-AhI" userLabel="Bridge Selection" customClass="BridgeSelectionViewController" customModule="EasyHue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BridgeSelectionViewController" title="Bridge Selection" id="7xU-Qb-AhI" userLabel="Bridge Selection" customClass="BridgeSelectionViewController" customModule="EasyHue" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XNU-d2-yzd"/>
                         <viewControllerLayoutGuide type="bottom" id="w2c-2x-5uE"/>
@@ -75,33 +107,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IxH-cl-X8f">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IxH-cl-X8f">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BridgeCell" textLabel="GuI-Js-l8q" detailTextLabel="yQZ-nT-cDh" style="IBUITableViewCellStyleSubtitle" id="5V7-0K-xPf">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="60"/>
+                                        <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5V7-0K-xPf" id="lWx-Yf-l7V">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GuI-Js-l8q">
-                                                    <rect key="frame" x="15" y="13" width="32" height="20"/>
+                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yQZ-nT-cDh">
-                                                    <rect key="frame" x="15" y="33" width="41" height="14"/>
+                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Gq2-1q-Nen" kind="presentation" id="Q9b-QU-FOa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -114,13 +149,14 @@
                             <constraint firstItem="IxH-cl-X8f" firstAttribute="bottom" secondItem="w2c-2x-5uE" secondAttribute="top" id="lk3-pM-03o"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="EKJ-2Y-z5q"/>
                     <connections>
                         <outlet property="tableView" destination="IxH-cl-X8f" id="mVX-AP-k69"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vw2-PH-qio" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="458" y="1945"/>
+            <point key="canvasLocation" x="1994" y="540"/>
         </scene>
     </scenes>
     <resources>

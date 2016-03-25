@@ -12,7 +12,7 @@ import RxCocoa
 import RxDataSources
 import SVProgressHUD
 
-class BridgeSelectionViewController: ViewController {
+class BridgeSelectionViewController: UIViewController {
     
     internal var viewModel: BridgeSelectionViewModel?
     private var disposeBag = DisposeBag()
@@ -34,7 +34,7 @@ class BridgeSelectionViewController: ViewController {
     private func setupBindings()
     {
         viewModel?.availableBridges
-            .drive(tableView.rx_itemsWithCellIdentifier("BridgeCell", cellType: UITableViewCell.self)) { (_, bridgeInfo, cell) in
+            .drive(tableView.rx_itemsWithCellIdentifier(TableViewCellreuseIdentifier.BridgeCell.rawValue, cellType: UITableViewCell.self)) { (_, bridgeInfo, cell) in
                 cell.textLabel?.text = bridgeInfo.id
                 cell.detailTextLabel?.text = bridgeInfo.ip
             }
@@ -57,5 +57,21 @@ class BridgeSelectionViewController: ViewController {
                 }
             }
             .addDisposableTo(disposeBag)
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue == .ShowBridgePushLink {
+            let cell = sender as! UITableViewCell!
+            let bridgePushLinkViewController = segue.destinationViewController as! BridgePushLinkViewController
+//            bridgePushLinkViewController.viewModel = self.viewModel.bridgePushLinkViewModel()
+        }
+    }
+}
+
+
+extension BridgeSelectionViewController {
+    class func instantiateFromStoryboard(storyboard: UIStoryboard) -> BridgeSelectionViewController {
+        return storyboard.viewControllerWithID(.BridgeSelectionViewController) as! BridgeSelectionViewController
     }
 }

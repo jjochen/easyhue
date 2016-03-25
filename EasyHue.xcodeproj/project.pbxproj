@@ -26,13 +26,15 @@
 		1943903D1C9D7F600029DD0C /* BridgeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943903C1C9D7F600029DD0C /* BridgeSelectionViewController.swift */; };
 		194390411C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390401C9D7F790029DD0C /* BridgeSelectionViewModel.swift */; };
 		194390421C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390401C9D7F790029DD0C /* BridgeSelectionViewModel.swift */; };
-		194390461C9D800F0029DD0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390451C9D800F0029DD0C /* ViewController.swift */; };
-		1943904A1C9D80490029DD0C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390491C9D80490029DD0C /* ViewModel.swift */; };
-		1943904B1C9D80490029DD0C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390491C9D80490029DD0C /* ViewModel.swift */; };
 		194390531C9E0E260029DD0C /* PHBridgeSearching+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390521C9E0E260029DD0C /* PHBridgeSearching+Rx.swift */; };
 		194390541C9E0E260029DD0C /* PHBridgeSearching+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390521C9E0E260029DD0C /* PHBridgeSearching+Rx.swift */; };
 		1976B4E31CA2D35000D510EC /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4E21CA2D35000D510EC /* UIStoryboard+Extensions.swift */; };
 		1976B4E71CA2D94400D510EC /* StoryboardIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4E61CA2D94400D510EC /* StoryboardIdentifiers.swift */; };
+		1976B4EA1CA48A3E00D510EC /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4E91CA48A3E00D510EC /* AppViewController.swift */; };
+		1976B4EC1CA495F100D510EC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4EB1CA495F100D510EC /* ViewModel.swift */; };
+		1976B4EE1CA4A1D000D510EC /* SVProgressHUD+EasyHue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4ED1CA4A1D000D510EC /* SVProgressHUD+EasyHue.swift */; };
+		1976B4F01CA4A8D400D510EC /* UIStoryboardSegue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4EF1CA4A8D400D510EC /* UIStoryboardSegue+Extensions.swift */; };
+		1976B4F21CA4A93000D510EC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4F11CA4A93000D510EC /* UIViewController+Extensions.swift */; };
 		19BC78341C7C696000783244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC78331C7C696000783244 /* AppDelegate.swift */; };
 		19BC783B1C7C696000783244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BC78391C7C696000783244 /* Main.storyboard */; };
 		19BC783D1C7C696000783244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19BC783C1C7C696000783244 /* Assets.xcassets */; };
@@ -68,11 +70,14 @@
 		191C07251C81B68900AE69D3 /* AppViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		1943903C1C9D7F600029DD0C /* BridgeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewController.swift; sourceTree = "<group>"; };
 		194390401C9D7F790029DD0C /* BridgeSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewModel.swift; sourceTree = "<group>"; };
-		194390451C9D800F0029DD0C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		194390491C9D80490029DD0C /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		194390521C9E0E260029DD0C /* PHBridgeSearching+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHBridgeSearching+Rx.swift"; sourceTree = "<group>"; };
 		1976B4E21CA2D35000D510EC /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		1976B4E61CA2D94400D510EC /* StoryboardIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiers.swift; sourceTree = "<group>"; };
+		1976B4E91CA48A3E00D510EC /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		1976B4EB1CA495F100D510EC /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		1976B4ED1CA4A1D000D510EC /* SVProgressHUD+EasyHue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+EasyHue.swift"; sourceTree = "<group>"; };
+		1976B4EF1CA4A8D400D510EC /* UIStoryboardSegue+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboardSegue+Extensions.swift"; sourceTree = "<group>"; };
+		1976B4F11CA4A93000D510EC /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		19BC78301C7C696000783244 /* EasyHue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyHue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BC78331C7C696000783244 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19BC783A1C7C696000783244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +156,7 @@
 			children = (
 				191C071B1C7CE68900AE69D3 /* HueSDKClient_not_in_use.swift */,
 				190E5ADE1C9EC03C009FBD95 /* ActivityIndicator.swift */,
+				1976B4EB1CA495F100D510EC /* ViewModel.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 			children = (
 				1943903C1C9D7F600029DD0C /* BridgeSelectionViewController.swift */,
 				194390401C9D7F790029DD0C /* BridgeSelectionViewModel.swift */,
+				190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */,
 			);
 			name = "Bridge Selection";
 			sourceTree = "<group>";
@@ -169,6 +176,9 @@
 			children = (
 				194390521C9E0E260029DD0C /* PHBridgeSearching+Rx.swift */,
 				190E5AEE1C9EF317009FBD95 /* PHHueSDK+Rx.swift */,
+				1976B4ED1CA4A1D000D510EC /* SVProgressHUD+EasyHue.swift */,
+				1976B4EF1CA4A8D400D510EC /* UIStoryboardSegue+Extensions.swift */,
+				1976B4F11CA4A93000D510EC /* UIViewController+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -182,6 +192,16 @@
 				1976B4E61CA2D94400D510EC /* StoryboardIdentifiers.swift */,
 			);
 			name = Storryboards;
+			sourceTree = "<group>";
+		};
+		1976B4E81CA48A2900D510EC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				19BC78331C7C696000783244 /* AppDelegate.swift */,
+				1976B4E91CA48A3E00D510EC /* AppViewController.swift */,
+				191C07251C81B68900AE69D3 /* AppViewModel.swift */,
+			);
+			name = App;
 			sourceTree = "<group>";
 		};
 		19BC78271C7C696000783244 = {
@@ -207,11 +227,7 @@
 		19BC78321C7C696000783244 /* EasyHue */ = {
 			isa = PBXGroup;
 			children = (
-				19BC78331C7C696000783244 /* AppDelegate.swift */,
-				191C07251C81B68900AE69D3 /* AppViewModel.swift */,
-				194390451C9D800F0029DD0C /* ViewController.swift */,
-				194390491C9D80490029DD0C /* ViewModel.swift */,
-				190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */,
+				1976B4E81CA48A2900D510EC /* App */,
 				1943903B1C9D7F070029DD0C /* Bridge Selection */,
 				191C071F1C7F768F00AE69D3 /* BridgePushLink */,
 				190E5AEA1C9EF079009FBD95 /* Protocols */,
@@ -457,19 +473,22 @@
 			files = (
 				191C07261C81B68900AE69D3 /* AppViewModel.swift in Sources */,
 				190E5ADF1C9EC03C009FBD95 /* ActivityIndicator.swift in Sources */,
-				1943904A1C9D80490029DD0C /* ViewModel.swift in Sources */,
 				19BC78341C7C696000783244 /* AppDelegate.swift in Sources */,
 				1943903D1C9D7F600029DD0C /* BridgeSelectionViewController.swift in Sources */,
+				1976B4EE1CA4A1D000D510EC /* SVProgressHUD+EasyHue.swift in Sources */,
 				1976B4E71CA2D94400D510EC /* StoryboardIdentifiers.swift in Sources */,
+				1976B4F21CA4A93000D510EC /* UIViewController+Extensions.swift in Sources */,
 				191C071E1C7E108200AE69D3 /* BridgePushLinkViewController.swift in Sources */,
+				1976B4EC1CA495F100D510EC /* ViewModel.swift in Sources */,
 				190E5AE41C9ED7BD009FBD95 /* BridgeInfo.swift in Sources */,
 				194390411C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */,
+				1976B4F01CA4A8D400D510EC /* UIStoryboardSegue+Extensions.swift in Sources */,
 				194390531C9E0E260029DD0C /* PHBridgeSearching+Rx.swift in Sources */,
+				1976B4EA1CA48A3E00D510EC /* AppViewController.swift in Sources */,
 				190E5AEC1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift in Sources */,
 				1976B4E31CA2D35000D510EC /* UIStoryboard+Extensions.swift in Sources */,
 				190E5AE81C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift in Sources */,
 				190E5AEF1C9EF317009FBD95 /* PHHueSDK+Rx.swift in Sources */,
-				194390461C9D800F0029DD0C /* ViewController.swift in Sources */,
 				191C07211C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,7 +508,6 @@
 				190E5AE51C9ED7E1009FBD95 /* BridgeInfo.swift in Sources */,
 				194390421C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */,
 				191C07271C81B68900AE69D3 /* AppViewModel.swift in Sources */,
-				1943904B1C9D80490029DD0C /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

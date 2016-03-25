@@ -34,6 +34,5 @@ internal class BridgeSelectionViewModel: ViewModel
         let availableBridges: Observable<[BridgeInfo]> = bridgeSearch.rx_startSearch()
             .trackActivity(loading)
         self.availableBridges = availableBridges.asDriver(onErrorJustReturn: [])
-    }
-    
+    }    
 }

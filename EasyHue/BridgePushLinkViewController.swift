@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class BridgePushLinkViewController: ViewController
+class BridgePushLinkViewController: UIViewController
 {
     internal var viewModel: BridgePushLinkViewModel?
     private var disposeBag = DisposeBag()
@@ -39,6 +39,13 @@ class BridgePushLinkViewController: ViewController
                 self.progressView.progress = pushLinkProgress
             }
             .addDisposableTo(disposeBag)
+    }
+}
+
+
+extension BridgePushLinkViewController {
+    class func instantiateFromStoryboard(storyboard: UIStoryboard) -> BridgePushLinkViewController {
+        return storyboard.viewControllerWithID(.BridgePushLinkViewController) as! BridgePushLinkViewController
     }
 }
 
