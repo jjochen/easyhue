@@ -107,12 +107,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IxH-cl-X8f">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IxH-cl-X8f">
                                 <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BridgeCell" textLabel="GuI-Js-l8q" detailTextLabel="yQZ-nT-cDh" style="IBUITableViewCellStyleSubtitle" id="5V7-0K-xPf">
-                                        <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="45" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5V7-0K-xPf" id="lWx-Yf-l7V">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -149,8 +149,15 @@
                             <constraint firstItem="IxH-cl-X8f" firstAttribute="bottom" secondItem="w2c-2x-5uE" secondAttribute="top" id="lk3-pM-03o"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="EKJ-2Y-z5q"/>
+                    <navigationItem key="navigationItem" id="EKJ-2Y-z5q">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="nws-RO-IAB">
+                            <connections>
+                                <action selector="refreshButtonTapped:" destination="7xU-Qb-AhI" id="CV1-J2-vrH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="refreshBarButtonItem" destination="nws-RO-IAB" id="GBc-Zv-4rL"/>
                         <outlet property="tableView" destination="IxH-cl-X8f" id="mVX-AP-k69"/>
                     </connections>
                 </viewController>

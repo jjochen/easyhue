@@ -16,6 +16,7 @@ internal class BridgeSelectionViewModel: ViewModel
     // MARK: Input
     let hueSDK: PHHueSDKProtocol
     let bridgeSearch: PHBridgeSearchingProtocol
+    var refreshTaps = PublishSubject<Void>()
     
     // MARK: Output
     internal let availableBridges: Driver<[BridgeInfo]>
@@ -31,8 +32,17 @@ internal class BridgeSelectionViewModel: ViewModel
         let loading = ActivityIndicator()
         self.loading = loading.asDriver()
         
-        let availableBridges: Observable<[BridgeInfo]> = bridgeSearch.rx_startSearch()
+        let availableBridges = bridgeSearch
+            .rx_startSearch()
             .trackActivity(loading)
-        self.availableBridges = availableBridges.asDriver(onErrorJustReturn: [])
-    }    
+        let refreshAvailableBridges = refreshTaps
+            .flatMapLatest { _ -> Observable<[BridgeInfo]> in
+                return availableBridges
+            }
+            .shareReplay(1)
+        self.availableBridges = [availableBridges, refreshAvailableBridges]
+            .toObservable()
+            .merge()
+            .asDriver(onErrorJustReturn: [])
+    }
 }
