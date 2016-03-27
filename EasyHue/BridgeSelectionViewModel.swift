@@ -14,8 +14,8 @@ import RxCocoa
 internal class BridgeSelectionViewModel: ViewModel
 {
     // MARK: Input
-    let hueSDK: PHHueSDKProtocol
-    let bridgeSearch: PHBridgeSearchingProtocol
+    let hueSDK: PHHueSDKType
+    let bridgeSearch: PHBridgeSearchingType
     var refreshTaps = PublishSubject<Void>()
     
     // MARK: Output
@@ -25,7 +25,7 @@ internal class BridgeSelectionViewModel: ViewModel
     
     // MARK: - Livecycle
     
-    init(hueSDK: PHHueSDKProtocol, bridgeSearch: PHBridgeSearchingProtocol) {
+    init(hueSDK: PHHueSDKType, bridgeSearch: PHBridgeSearchingType) {
         self.hueSDK = hueSDK
         self.bridgeSearch = bridgeSearch
         

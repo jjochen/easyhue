@@ -8,6 +8,6 @@
 
 import Foundation
 
-extension PHHueSDK: PHHueSDKProtocol {
+extension PHHueSDK: PHHueSDKType {
     
 }

@@ -12,8 +12,6 @@ import RxCocoa
 import Nimble
 @testable import EasyHue
 
-let bridgeMock1 = BridgeInfo(id: "id_1", ip: "ip_1")
-let bridgeMock2 = BridgeInfo(id: "id_2", ip: "ip_2")
 
 class BridgeSelectionViewModelTests: XCTestCase {
     
@@ -23,23 +21,8 @@ class BridgeSelectionViewModelTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        class  PHBridgeSearchingMock: PHBridgeSearchingProtocol {
-            func rx_startSearch() -> Observable<[BridgeInfo]> {
-                return Observable.create { observer in
-                    let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-                    let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(0.2 * Double(NSEC_PER_SEC)))
-                    dispatch_after(delay, queue, {
-                        observer.on(.Next([bridgeMock1, bridgeMock2]))
-                        observer.on(.Completed)
-                    })
-                    return NopDisposable.instance
-                }
-            }
-        }
-        class  PHHueSDKMock: PHHueSDKProtocol {
-        }
         
-        self.viewModel = BridgeSelectionViewModel(hueSDK: PHHueSDKMock(), bridgeSearch: PHBridgeSearchingMock())
+        self.viewModel = BridgeSelectionViewModel(hueSDK: PHHueSDKStub(), bridgeSearch: PHBridgeSearchingStub())
         self.disposeBag = DisposeBag()
     }
     
@@ -52,7 +35,7 @@ class BridgeSelectionViewModelTests: XCTestCase {
         
         var bridges: [BridgeInfo]! = []
         self.viewModel.availableBridges.driveNext { result in
-            bridges.appendContentsOf(result)
+            bridges = result
         }.addDisposableTo(disposeBag)
         
         expect(bridges).toEventually(contain(bridgeMock1))
@@ -71,3 +54,22 @@ class BridgeSelectionViewModelTests: XCTestCase {
         expect(result).toEventually(beFalse())
     }
 }
+
+
+private class  PHBridgeSearchingStub: PHBridgeSearchingType {
+    func rx_startSearch() -> Observable<[BridgeInfo]> {
+        return Observable.create { observer in
+            let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+            let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC)))
+            dispatch_after(delay, queue, {
+                observer.on(.Next([bridgeMock1, bridgeMock2]))
+                observer.on(.Completed)
+            })
+            return NopDisposable.instance
+        }
+    }
+}
+private class  PHHueSDKStub: PHHueSDKType {
+    
+}
+

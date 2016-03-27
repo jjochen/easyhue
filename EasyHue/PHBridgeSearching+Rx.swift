@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-extension PHBridgeSearching: PHBridgeSearchingProtocol {
+extension PHBridgeSearching: PHBridgeSearchingType {
     func rx_startSearch() -> Observable<[BridgeInfo]> {
         return Observable.create { observer in
             self.startSearchWithCompletionHandler { bridgesFound -> () in

@@ -9,6 +9,6 @@
 import Foundation
 import RxSwift
 
-protocol PHBridgeSearchingProtocol {
+protocol PHBridgeSearchingType {
     func rx_startSearch() -> Observable<[BridgeInfo]>
 }

@@ -16,6 +16,7 @@
 		191C071E1C7E108200AE69D3 /* BridgePushLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C071D1C7E108200AE69D3 /* BridgePushLinkViewController.swift */; };
 		191C07211C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C07201C7F770900AE69D3 /* BridgePushLinkViewModel.swift */; };
 		191C07261C81B68900AE69D3 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C07251C81B68900AE69D3 /* AppViewModel.swift */; };
+		1920B3CF1CA829F400CBF97B /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920B3CE1CA829F400CBF97B /* TestHelpers.swift */; };
 		1943903D1C9D7F600029DD0C /* BridgeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943903C1C9D7F600029DD0C /* BridgeSelectionViewController.swift */; };
 		194390411C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390401C9D7F790029DD0C /* BridgeSelectionViewModel.swift */; };
 		194390531C9E0E260029DD0C /* PHBridgeSearching+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390521C9E0E260029DD0C /* PHBridgeSearching+Rx.swift */; };
@@ -59,6 +60,8 @@
 		191C071D1C7E108200AE69D3 /* BridgePushLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgePushLinkViewController.swift; sourceTree = "<group>"; };
 		191C07201C7F770900AE69D3 /* BridgePushLinkViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgePushLinkViewModel.swift; sourceTree = "<group>"; };
 		191C07251C81B68900AE69D3 /* AppViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		1920B3CC1CA74DF300CBF97B /* BridgeSelectionViewModelSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewModelSpecs.swift; sourceTree = "<group>"; };
+		1920B3CE1CA829F400CBF97B /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		1943903C1C9D7F600029DD0C /* BridgeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewController.swift; sourceTree = "<group>"; };
 		194390401C9D7F790029DD0C /* BridgeSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewModel.swift; sourceTree = "<group>"; };
 		194390521C9E0E260029DD0C /* PHBridgeSearching+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHBridgeSearching+Rx.swift"; sourceTree = "<group>"; };
@@ -241,9 +244,11 @@
 		19BC78491C7C696000783244 /* EasyHueTests */ = {
 			isa = PBXGroup;
 			children = (
+				1920B3CE1CA829F400CBF97B /* TestHelpers.swift */,
 				190E5AF31C9F32D0009FBD95 /* BridgeInfoTests.swift */,
 				19BC784A1C7C696000783244 /* BridgeSelectionViewModelTests.swift */,
 				190E5AF11C9F127E009FBD95 /* Resources */,
+				1920B3CC1CA74DF300CBF97B /* BridgeSelectionViewModelSpecs.swift */,
 			);
 			path = EasyHueTests;
 			sourceTree = "<group>";
@@ -498,6 +503,7 @@
 			files = (
 				19BC784B1C7C696000783244 /* BridgeSelectionViewModelTests.swift in Sources */,
 				190E5AF41C9F32D0009FBD95 /* BridgeInfoTests.swift in Sources */,
+				1920B3CF1CA829F400CBF97B /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
