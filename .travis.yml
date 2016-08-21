@@ -7,3 +7,13 @@ cache:
 xcode_workspace: EasyHue.xcworkspace
 xcode_scheme: EasyHue
 xcode_sdk: iphonesimulator
+env:
+  global:
+    - LC_CTYPE=en_US.UTF-8
+    - LANG=en_US.UTF-8
+install:
+  - bundle install
+  - bundle exec pod repo update
+  - bundle exec pod install
+script:
+  - bundle exec fastlane test
