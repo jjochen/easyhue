@@ -16,7 +16,7 @@ install_framework()
     local source="$1"
   fi
 
-  local destination="${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+  local destination="${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
 
   if [ -L "${source}" ]; then
       echo "Symlinked..."
@@ -59,8 +59,8 @@ code_sign_if_enabled() {
   if [ -n "${EXPANDED_CODE_SIGN_IDENTITY}" -a "${CODE_SIGNING_REQUIRED}" != "NO" -a "${CODE_SIGNING_ALLOWED}" != "NO" ]; then
     # Use the current code_sign_identitiy
     echo "Code Signing $1 with Identity ${EXPANDED_CODE_SIGN_IDENTITY_NAME}"
-    echo "/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"$1\""
-    /usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements "$1"
+    echo "/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} ${OTHER_CODE_SIGN_FLAGS} --preserve-metadata=identifier,entitlements \"$1\""
+    /usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} ${OTHER_CODE_SIGN_FLAGS} --preserve-metadata=identifier,entitlements "$1"
   fi
 }
 
@@ -84,32 +84,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-EasyHueTests/CocoaLumberjack.framework"
-  install_framework "Pods-EasyHueTests/Realm.framework"
-  install_framework "Pods-EasyHueTests/RealmSwift.framework"
-  install_framework "Pods-EasyHueTests/RxCocoa.framework"
-  install_framework "Pods-EasyHueTests/RxDataSources.framework"
-  install_framework "Pods-EasyHueTests/RxOptional.framework"
-  install_framework "Pods-EasyHueTests/RxSwift.framework"
-  install_framework "Pods-EasyHueTests/SVProgressHUD.framework"
-  install_framework "Pods-EasyHueTests/SnapKit.framework"
-  install_framework "Pods-EasyHueTests/Nimble.framework"
-  install_framework "Pods-EasyHueTests/Quick.framework"
-  install_framework "Pods-EasyHueTests/RxBlocking.framework"
-  install_framework "Pods-EasyHueTests/RxTests.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RxSwift/RxSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Nimble/Nimble.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Quick/Quick.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RxBlocking/RxBlocking.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RxTests/RxTests.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-EasyHueTests/CocoaLumberjack.framework"
-  install_framework "Pods-EasyHueTests/Realm.framework"
-  install_framework "Pods-EasyHueTests/RealmSwift.framework"
-  install_framework "Pods-EasyHueTests/RxCocoa.framework"
-  install_framework "Pods-EasyHueTests/RxDataSources.framework"
-  install_framework "Pods-EasyHueTests/RxOptional.framework"
-  install_framework "Pods-EasyHueTests/RxSwift.framework"
-  install_framework "Pods-EasyHueTests/SVProgressHUD.framework"
-  install_framework "Pods-EasyHueTests/SnapKit.framework"
-  install_framework "Pods-EasyHueTests/Nimble.framework"
-  install_framework "Pods-EasyHueTests/Quick.framework"
-  install_framework "Pods-EasyHueTests/RxBlocking.framework"
-  install_framework "Pods-EasyHueTests/RxTests.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RxSwift/RxSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Nimble/Nimble.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Quick/Quick.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RxBlocking/RxBlocking.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RxTests/RxTests.framework"
 fi

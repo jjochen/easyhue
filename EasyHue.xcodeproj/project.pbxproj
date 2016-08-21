@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12FA9C9F362FC4AFDC36E825 /* Pods_EasyHueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB5467EDAFF5948C70E6604 /* Pods_EasyHueTests.framework */; };
 		190E5ADF1C9EC03C009FBD95 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5ADE1C9EC03C009FBD95 /* ActivityIndicator.swift */; };
 		190E5AE41C9ED7BD009FBD95 /* BridgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */; };
 		190E5AE81C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE71C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift */; };
@@ -32,8 +33,7 @@
 		19BC783D1C7C696000783244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19BC783C1C7C696000783244 /* Assets.xcassets */; };
 		19BC78401C7C696000783244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BC783E1C7C696000783244 /* LaunchScreen.storyboard */; };
 		19BC784B1C7C696000783244 /* BridgeSelectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC784A1C7C696000783244 /* BridgeSelectionViewModelTests.swift */; };
-		A3086D6775F470C2AFA84193 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD24C227FE1D91D82F0A60D3 /* Pods.framework */; };
-		D7F275ED62B1ED969B3B736B /* Pods_EasyHueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4707E47F35260ED30E75B363 /* Pods_EasyHueTests.framework */; };
+		72D0371A34C0A0CAD1A3DF09 /* Pods_EasyHue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1517242E692362A0931260CE /* Pods_EasyHue.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07AE24437628B72C61663089 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		1517242E692362A0931260CE /* Pods_EasyHue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		190E5ADE1C9EC03C009FBD95 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeInfo.swift; sourceTree = "<group>"; };
 		190E5AE71C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHBridgeSearchingProtocol.swift; sourceTree = "<group>"; };
@@ -81,11 +81,12 @@
 		19BC78461C7C696000783244 /* EasyHueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyHueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BC784A1C7C696000783244 /* BridgeSelectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewModelTests.swift; sourceTree = "<group>"; };
 		19BC784C1C7C696000783244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4707E47F35260ED30E75B363 /* Pods_EasyHueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E81900E3396BC79E2DA23D5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		6557457FE4E60C7302B7BCE7 /* Pods-EasyHueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests.release.xcconfig"; sourceTree = "<group>"; };
+		4CA01AD947D65E76D24B1ABE /* Pods-EasyHue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHue.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue.release.xcconfig"; sourceTree = "<group>"; };
+		7FB5467EDAFF5948C70E6604 /* Pods_EasyHueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD24C227FE1D91D82F0A60D3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9ABE0B32CE27CDC2B4DD8F7 /* Pods-EasyHueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B1BEB2CF18DC75F8595BB142 /* Pods-EasyHueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BEB228D29A30A556B04826EA /* Pods-EasyHueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests.release.xcconfig"; sourceTree = "<group>"; };
+		E19AEBA3C373138D860E5B69 /* Pods-EasyHue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3086D6775F470C2AFA84193 /* Pods.framework in Frameworks */,
+				72D0371A34C0A0CAD1A3DF09 /* Pods_EasyHue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7F275ED62B1ED969B3B736B /* Pods_EasyHueTests.framework in Frameworks */,
+				12FA9C9F362FC4AFDC36E825 /* Pods_EasyHueTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,8 +212,8 @@
 				19BC78321C7C696000783244 /* EasyHue */,
 				19BC78491C7C696000783244 /* EasyHueTests */,
 				19BC78311C7C696000783244 /* Products */,
-				DFCA60072FBC7CF3467AFC57 /* Pods */,
 				81BEFA188EE36123C72A01BD /* Frameworks */,
+				CED3546C51CD1E193D5A03E9 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,19 +257,20 @@
 		81BEFA188EE36123C72A01BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4707E47F35260ED30E75B363 /* Pods_EasyHueTests.framework */,
 				AD24C227FE1D91D82F0A60D3 /* Pods.framework */,
+				1517242E692362A0931260CE /* Pods_EasyHue.framework */,
+				7FB5467EDAFF5948C70E6604 /* Pods_EasyHueTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DFCA60072FBC7CF3467AFC57 /* Pods */ = {
+		CED3546C51CD1E193D5A03E9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D9ABE0B32CE27CDC2B4DD8F7 /* Pods-EasyHueTests.debug.xcconfig */,
-				6557457FE4E60C7302B7BCE7 /* Pods-EasyHueTests.release.xcconfig */,
-				4E81900E3396BC79E2DA23D5 /* Pods.debug.xcconfig */,
-				07AE24437628B72C61663089 /* Pods.release.xcconfig */,
+				E19AEBA3C373138D860E5B69 /* Pods-EasyHue.debug.xcconfig */,
+				4CA01AD947D65E76D24B1ABE /* Pods-EasyHue.release.xcconfig */,
+				B1BEB2CF18DC75F8595BB142 /* Pods-EasyHueTests.debug.xcconfig */,
+				BEB228D29A30A556B04826EA /* Pods-EasyHueTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -280,12 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19BC785A1C7C696000783244 /* Build configuration list for PBXNativeTarget "EasyHue" */;
 			buildPhases = (
-				45577B09F3034B651F912DC1 /* Check Pods Manifest.lock */,
+				D77EB1CB004B4EDD00D20A4A /* [CP] Check Pods Manifest.lock */,
 				19BC782C1C7C696000783244 /* Sources */,
 				19BC782D1C7C696000783244 /* Frameworks */,
 				19BC782E1C7C696000783244 /* Resources */,
-				9EA0FDD89DB8E990456BB8F6 /* Embed Pods Frameworks */,
-				AFDA10F055B493D509301E83 /* Copy Pods Resources */,
+				0216B9C9E3A2A1444DCED5A3 /* [CP] Embed Pods Frameworks */,
+				69968B84F33C9EE82CAD5C25 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -300,12 +302,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19BC785D1C7C696000783244 /* Build configuration list for PBXNativeTarget "EasyHueTests" */;
 			buildPhases = (
-				104232B586AFD5EDD8C5AD58 /* Check Pods Manifest.lock */,
+				EAA860D756CDFB10C9E20176 /* [CP] Check Pods Manifest.lock */,
 				19BC78421C7C696000783244 /* Sources */,
 				19BC78431C7C696000783244 /* Frameworks */,
 				19BC78441C7C696000783244 /* Resources */,
-				CB432D4395C9CCA04D6CC73F /* Embed Pods Frameworks */,
-				D4B762547FBC390289910566 /* Copy Pods Resources */,
+				946A59956D5D922CFF9C05F6 /* [CP] Embed Pods Frameworks */,
+				4044D0C2BBF343D8C2AA9847 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -378,74 +380,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		104232B586AFD5EDD8C5AD58 /* Check Pods Manifest.lock */ = {
+		0216B9C9E3A2A1444DCED5A3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		45577B09F3034B651F912DC1 /* Check Pods Manifest.lock */ = {
+		4044D0C2BBF343D8C2AA9847 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9EA0FDD89DB8E990456BB8F6 /* Embed Pods Frameworks */ = {
+		69968B84F33C9EE82CAD5C25 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AFDA10F055B493D509301E83 /* Copy Pods Resources */ = {
+		946A59956D5D922CFF9C05F6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB432D4395C9CCA04D6CC73F /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,19 +440,34 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D4B762547FBC390289910566 /* Copy Pods Resources */ = {
+		D77EB1CB004B4EDD00D20A4A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EAA860D756CDFB10C9E20176 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -573,7 +575,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -612,7 +614,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -622,7 +624,7 @@
 		};
 		19BC785B1C7C696000783244 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E81900E3396BC79E2DA23D5 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = E19AEBA3C373138D860E5B69 /* Pods-EasyHue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -638,7 +640,7 @@
 		};
 		19BC785C1C7C696000783244 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07AE24437628B72C61663089 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 4CA01AD947D65E76D24B1ABE /* Pods-EasyHue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -653,7 +655,7 @@
 		};
 		19BC785E1C7C696000783244 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9ABE0B32CE27CDC2B4DD8F7 /* Pods-EasyHueTests.debug.xcconfig */;
+			baseConfigurationReference = B1BEB2CF18DC75F8595BB142 /* Pods-EasyHueTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -669,7 +671,7 @@
 		};
 		19BC785F1C7C696000783244 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6557457FE4E60C7302B7BCE7 /* Pods-EasyHueTests.release.xcconfig */;
+			baseConfigurationReference = BEB228D29A30A556B04826EA /* Pods-EasyHueTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
