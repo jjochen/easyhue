@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12FA9C9F362FC4AFDC36E825 /* Pods_EasyHueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB5467EDAFF5948C70E6604 /* Pods_EasyHueTests.framework */; };
+		0141BC853AEAAD66A9E330DA /* Pods_EasyHueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45FEC71EE93F8A89B40A49D /* Pods_EasyHueTests.framework */; };
 		190E5ADF1C9EC03C009FBD95 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5ADE1C9EC03C009FBD95 /* ActivityIndicator.swift */; };
 		190E5AE41C9ED7BD009FBD95 /* BridgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */; };
 		190E5AE81C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE71C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift */; };
@@ -21,6 +21,8 @@
 		1943903D1C9D7F600029DD0C /* BridgeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943903C1C9D7F600029DD0C /* BridgeSelectionViewController.swift */; };
 		194390411C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390401C9D7F790029DD0C /* BridgeSelectionViewModel.swift */; };
 		194390531C9E0E260029DD0C /* PHBridgeSearching+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390521C9E0E260029DD0C /* PHBridgeSearching+Rx.swift */; };
+		196674221D8F36D000653094 /* SVProgressHUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196674211D8F36D000653094 /* SVProgressHUD+Rx.swift */; };
+		196674231D8F36D000653094 /* SVProgressHUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196674211D8F36D000653094 /* SVProgressHUD+Rx.swift */; };
 		1976B4E31CA2D35000D510EC /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4E21CA2D35000D510EC /* UIStoryboard+Extensions.swift */; };
 		1976B4E71CA2D94400D510EC /* StoryboardIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4E61CA2D94400D510EC /* StoryboardIdentifiers.swift */; };
 		1976B4EA1CA48A3E00D510EC /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4E91CA48A3E00D510EC /* AppViewController.swift */; };
@@ -33,7 +35,7 @@
 		19BC783D1C7C696000783244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19BC783C1C7C696000783244 /* Assets.xcassets */; };
 		19BC78401C7C696000783244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BC783E1C7C696000783244 /* LaunchScreen.storyboard */; };
 		19BC784B1C7C696000783244 /* BridgeSelectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC784A1C7C696000783244 /* BridgeSelectionViewModelTests.swift */; };
-		72D0371A34C0A0CAD1A3DF09 /* Pods_EasyHue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1517242E692362A0931260CE /* Pods_EasyHue.framework */; };
+		E65DF2B8C35BBE1757F83150 /* Pods_EasyHue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BA1D5FBB5EE8B3C1CFCB65 /* Pods_EasyHue.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1517242E692362A0931260CE /* Pods_EasyHue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		092F31BAB682901385A5A0FA /* Pods-EasyHueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests.debug.xcconfig"; sourceTree = "<group>"; };
 		190E5ADE1C9EC03C009FBD95 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeInfo.swift; sourceTree = "<group>"; };
 		190E5AE71C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHBridgeSearchingProtocol.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		1943903C1C9D7F600029DD0C /* BridgeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewController.swift; sourceTree = "<group>"; };
 		194390401C9D7F790029DD0C /* BridgeSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewModel.swift; sourceTree = "<group>"; };
 		194390521C9E0E260029DD0C /* PHBridgeSearching+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHBridgeSearching+Rx.swift"; sourceTree = "<group>"; };
+		196674211D8F36D000653094 /* SVProgressHUD+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+Rx.swift"; sourceTree = "<group>"; };
 		1976B4E21CA2D35000D510EC /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		1976B4E61CA2D94400D510EC /* StoryboardIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiers.swift; sourceTree = "<group>"; };
 		1976B4E91CA48A3E00D510EC /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
@@ -81,12 +84,12 @@
 		19BC78461C7C696000783244 /* EasyHueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyHueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BC784A1C7C696000783244 /* BridgeSelectionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewModelTests.swift; sourceTree = "<group>"; };
 		19BC784C1C7C696000783244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CA01AD947D65E76D24B1ABE /* Pods-EasyHue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHue.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue.release.xcconfig"; sourceTree = "<group>"; };
-		7FB5467EDAFF5948C70E6604 /* Pods_EasyHueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45BA1D5FBB5EE8B3C1CFCB65 /* Pods_EasyHue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EBA0F2A59C495F118332B77 /* Pods-EasyHue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHue.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue.release.xcconfig"; sourceTree = "<group>"; };
+		A45FEC71EE93F8A89B40A49D /* Pods_EasyHueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyHueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD24C227FE1D91D82F0A60D3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1BEB2CF18DC75F8595BB142 /* Pods-EasyHueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BEB228D29A30A556B04826EA /* Pods-EasyHueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests.release.xcconfig"; sourceTree = "<group>"; };
-		E19AEBA3C373138D860E5B69 /* Pods-EasyHue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue.debug.xcconfig"; sourceTree = "<group>"; };
+		E544B32AA02C74B0563035F7 /* Pods-EasyHueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED2EC14EA2421F191BB5934A /* Pods-EasyHue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72D0371A34C0A0CAD1A3DF09 /* Pods_EasyHue.framework in Frameworks */,
+				E65DF2B8C35BBE1757F83150 /* Pods_EasyHue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12FA9C9F362FC4AFDC36E825 /* Pods_EasyHueTests.framework in Frameworks */,
+				0141BC853AEAAD66A9E330DA /* Pods_EasyHueTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +174,7 @@
 				194390521C9E0E260029DD0C /* PHBridgeSearching+Rx.swift */,
 				190E5AEE1C9EF317009FBD95 /* PHHueSDK+Rx.swift */,
 				1976B4ED1CA4A1D000D510EC /* SVProgressHUD+EasyHue.swift */,
+				196674211D8F36D000653094 /* SVProgressHUD+Rx.swift */,
 				1976B4EF1CA4A8D400D510EC /* UIStoryboardSegue+Extensions.swift */,
 				1976B4F11CA4A93000D510EC /* UIViewController+Extensions.swift */,
 			);
@@ -213,7 +217,7 @@
 				19BC78491C7C696000783244 /* EasyHueTests */,
 				19BC78311C7C696000783244 /* Products */,
 				81BEFA188EE36123C72A01BD /* Frameworks */,
-				CED3546C51CD1E193D5A03E9 /* Pods */,
+				4C8765CA9F2A88B3755535CA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -254,25 +258,25 @@
 			path = EasyHueTests;
 			sourceTree = "<group>";
 		};
+		4C8765CA9F2A88B3755535CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED2EC14EA2421F191BB5934A /* Pods-EasyHue.debug.xcconfig */,
+				4EBA0F2A59C495F118332B77 /* Pods-EasyHue.release.xcconfig */,
+				092F31BAB682901385A5A0FA /* Pods-EasyHueTests.debug.xcconfig */,
+				E544B32AA02C74B0563035F7 /* Pods-EasyHueTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		81BEFA188EE36123C72A01BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				AD24C227FE1D91D82F0A60D3 /* Pods.framework */,
-				1517242E692362A0931260CE /* Pods_EasyHue.framework */,
-				7FB5467EDAFF5948C70E6604 /* Pods_EasyHueTests.framework */,
+				45BA1D5FBB5EE8B3C1CFCB65 /* Pods_EasyHue.framework */,
+				A45FEC71EE93F8A89B40A49D /* Pods_EasyHueTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CED3546C51CD1E193D5A03E9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E19AEBA3C373138D860E5B69 /* Pods-EasyHue.debug.xcconfig */,
-				4CA01AD947D65E76D24B1ABE /* Pods-EasyHue.release.xcconfig */,
-				B1BEB2CF18DC75F8595BB142 /* Pods-EasyHueTests.debug.xcconfig */,
-				BEB228D29A30A556B04826EA /* Pods-EasyHueTests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,12 +286,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19BC785A1C7C696000783244 /* Build configuration list for PBXNativeTarget "EasyHue" */;
 			buildPhases = (
-				D77EB1CB004B4EDD00D20A4A /* [CP] Check Pods Manifest.lock */,
+				1D8DE849F88278F48B49E396 /* [CP] Check Pods Manifest.lock */,
 				19BC782C1C7C696000783244 /* Sources */,
 				19BC782D1C7C696000783244 /* Frameworks */,
 				19BC782E1C7C696000783244 /* Resources */,
-				0216B9C9E3A2A1444DCED5A3 /* [CP] Embed Pods Frameworks */,
-				69968B84F33C9EE82CAD5C25 /* [CP] Copy Pods Resources */,
+				4FC7520F767D0A102020356E /* [CP] Embed Pods Frameworks */,
+				9FB2E474F9C25680F718ABFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,12 +306,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19BC785D1C7C696000783244 /* Build configuration list for PBXNativeTarget "EasyHueTests" */;
 			buildPhases = (
-				EAA860D756CDFB10C9E20176 /* [CP] Check Pods Manifest.lock */,
+				4C822B60F77E9354436091DF /* [CP] Check Pods Manifest.lock */,
 				19BC78421C7C696000783244 /* Sources */,
 				19BC78431C7C696000783244 /* Frameworks */,
 				19BC78441C7C696000783244 /* Resources */,
-				946A59956D5D922CFF9C05F6 /* [CP] Embed Pods Frameworks */,
-				4044D0C2BBF343D8C2AA9847 /* [CP] Copy Pods Resources */,
+				8115810EE69DCE9E5A2732C9 /* [CP] Embed Pods Frameworks */,
+				4833691D74FB781973020140 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -327,15 +331,17 @@
 			attributes = {
 				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Jochen Pfeiffer";
 				TargetAttributes = {
 					19BC782F1C7C696000783244 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 2TV9GXC7CB;
+						LastSwiftMigration = 0800;
 					};
 					19BC78451C7C696000783244 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 19BC782F1C7C696000783244;
 					};
 				};
@@ -380,22 +386,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0216B9C9E3A2A1444DCED5A3 /* [CP] Embed Pods Frameworks */ = {
+		1D8DE849F88278F48B49E396 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		4044D0C2BBF343D8C2AA9847 /* [CP] Copy Pods Resources */ = {
+		4833691D74FB781973020140 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -410,22 +416,37 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		69968B84F33C9EE82CAD5C25 /* [CP] Copy Pods Resources */ = {
+		4C822B60F77E9354436091DF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		946A59956D5D922CFF9C05F6 /* [CP] Embed Pods Frameworks */ = {
+		4FC7520F767D0A102020356E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8115810EE69DCE9E5A2732C9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -440,34 +461,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D77EB1CB004B4EDD00D20A4A /* [CP] Check Pods Manifest.lock */ = {
+		9FB2E474F9C25680F718ABFD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		EAA860D756CDFB10C9E20176 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -494,6 +500,7 @@
 				190E5AEC1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift in Sources */,
 				1976B4E31CA2D35000D510EC /* UIStoryboard+Extensions.swift in Sources */,
 				190E5AE81C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift in Sources */,
+				196674221D8F36D000653094 /* SVProgressHUD+Rx.swift in Sources */,
 				190E5AEF1C9EF317009FBD95 /* PHHueSDK+Rx.swift in Sources */,
 				191C07211C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */,
 			);
@@ -504,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19BC784B1C7C696000783244 /* BridgeSelectionViewModelTests.swift in Sources */,
+				196674231D8F36D000653094 /* SVProgressHUD+Rx.swift in Sources */,
 				190E5AF41C9F32D0009FBD95 /* BridgeInfoTests.swift in Sources */,
 				1920B3CF1CA829F400CBF97B /* TestHelpers.swift in Sources */,
 			);
@@ -552,8 +560,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -597,8 +607,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -617,6 +629,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -624,8 +637,9 @@
 		};
 		19BC785B1C7C696000783244 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E19AEBA3C373138D860E5B69 /* Pods-EasyHue.debug.xcconfig */;
+			baseConfigurationReference = ED2EC14EA2421F191BB5934A /* Pods-EasyHue.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -635,13 +649,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyHue/EasyHue-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		19BC785C1C7C696000783244 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CA01AD947D65E76D24B1ABE /* Pods-EasyHue.release.xcconfig */;
+			baseConfigurationReference = 4EBA0F2A59C495F118332B77 /* Pods-EasyHue.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -650,13 +666,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jochen-pfeiffer.easyhue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyHue/EasyHue-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		19BC785E1C7C696000783244 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1BEB2CF18DC75F8595BB142 /* Pods-EasyHueTests.debug.xcconfig */;
+			baseConfigurationReference = 092F31BAB682901385A5A0FA /* Pods-EasyHueTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyHueTests/Info.plist;
@@ -665,14 +683,16 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyHue/EasyHueTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyHue.app/EasyHue";
 			};
 			name = Debug;
 		};
 		19BC785F1C7C696000783244 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEB228D29A30A556B04826EA /* Pods-EasyHueTests.release.xcconfig */;
+			baseConfigurationReference = E544B32AA02C74B0563035F7 /* Pods-EasyHueTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyHueTests/Info.plist;
@@ -680,6 +700,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jochen-pfeiffer.EasyHueTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EasyHue/EasyHueTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyHue.app/EasyHue";
 			};
 			name = Release;

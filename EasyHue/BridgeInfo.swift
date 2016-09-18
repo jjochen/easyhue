@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class BridgeInfo: CustomStringConvertible {
+open class BridgeInfo: CustomStringConvertible {
     
     let id: String
     let ip: String
@@ -18,7 +18,7 @@ public class BridgeInfo: CustomStringConvertible {
         self.ip = ip
     }
     
-    public var description: String {
+    open var description: String {
         return "Bridge \(id) @ \(ip)"
     }
 }

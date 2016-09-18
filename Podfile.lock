@@ -8,39 +8,27 @@ PODS:
   - PhilipsHueSDK-iOS (1.11.2):
     - CocoaLumberjack (~> 1.8)
   - Quick (0.9.3)
-  - Realm (1.0.2):
-    - Realm/Headers (= 1.0.2)
-  - Realm/Headers (1.0.2)
-  - RealmSwift (1.0.2):
-    - Realm (= 1.0.2)
-  - RxBlocking (2.6.0):
-    - RxSwift (~> 2.5)
-  - RxCocoa (2.6.0):
-    - RxSwift (~> 2.5)
-  - RxDataSources (0.9):
-    - RxCocoa (~> 2.2)
-    - RxSwift (~> 2.2)
-  - RxOptional (2.0.0):
-    - RxCocoa (~> 2.0)
-    - RxSwift (~> 2.0)
-  - RxSwift (2.6.0)
-  - RxTests (2.6.0):
-    - RxSwift (~> 2.5)
-  - SnapKit (0.22.0)
+  - RxBlocking (3.0.0-beta.1):
+    - RxSwift (~> 3.0.0-beta.1)
+  - RxCocoa (3.0.0-beta.1):
+    - RxSwift (~> 3.0.0-beta.1)
+  - RxDataSources (1.0.0-beta.2):
+    - RxCocoa (~> 3.0.0-beta.1)
+    - RxSwift (~> 3.0.0-beta.1)
+  - RxSwift (3.0.0-beta.1)
+  - RxTests (3.0.0-beta.1):
+    - RxSwift (~> 3.0.0-beta.1)
   - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
   - Nimble
   - PhilipsHueSDK-iOS
   - Quick
-  - RealmSwift
-  - RxBlocking
-  - RxCocoa
-  - RxDataSources
-  - RxOptional
-  - RxSwift
-  - RxTests
-  - SnapKit
+  - RxBlocking (~> 3.0.0-beta.1)
+  - RxCocoa (~> 3.0.0-beta.1)
+  - RxDataSources (~> 1.0.0-beta.2)
+  - RxSwift (~> 3.0.0-beta.1)
+  - RxTests (~> 3.0.0-beta.1)
   - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -48,17 +36,13 @@ SPEC CHECKSUMS:
   Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
   PhilipsHueSDK-iOS: dc7a46c819347b6895923960df1c9a6b4aa25cd6
   Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
-  Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
-  RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
-  RxBlocking: f2e0a7e74d5e9d3029d2b1118e2af01f583fbdd8
-  RxCocoa: 89ab00d5753502520227940e3a0e0a0413683c6b
-  RxDataSources: e169bba94a7be584df7c1e1487fa56edc8753ae6
-  RxOptional: b77fb47a0190213cf8a37c7a2b7fda28160b4563
-  RxSwift: 77f3a0b15324baa7a1c9bfa9f199648a82424e26
-  RxTests: cdcc379c70e80089a8bc2c99515223339d1c3b81
-  SnapKit: 0dd2fd157330f1ea11fd84da13e6be8a7a22bae0
+  RxBlocking: 422944880fe63b432c459dc87be7c8178dcf45f3
+  RxCocoa: 8cecf331302b8ae5381bbab1bccba4ede2eae6a8
+  RxDataSources: 1cd87dc97fd46be002942eb1dcb1b432535141dd
+  RxSwift: 0823e8d7969c23bfa9ddfb2afa4881e424a1a710
+  RxTests: 819cbca750007349f03cfdb89bc07d412f67ab96
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 2cd27878961e88fe308604cd759cec30799fad9d
+PODFILE CHECKSUM: 7fe5e641ab115eeda7ac8d2df8a59df9fdd2de1f
 
 COCOAPODS: 1.0.1

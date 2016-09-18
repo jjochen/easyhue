@@ -14,9 +14,9 @@ class AppViewController: UIViewController {
    
     var viewModel: AppViewModel?
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // This is the embed segue
-        guard let navigtionController = segue.destinationViewController as? UINavigationController else { return }
+        guard let navigtionController = segue.destination as? UINavigationController else { return }
         guard let bridgeSelectionViewController = navigtionController.topViewController as? BridgeSelectionViewController else { return }
         
         bridgeSelectionViewController.viewModel = self.viewModel?.bridgeSelectionViewModel()
@@ -24,7 +24,7 @@ class AppViewController: UIViewController {
 }
 
 extension AppViewController {
-    class func instantiateFromStoryboard(storyboard: UIStoryboard) -> AppViewController {
+    class func instantiateFromStoryboard(_ storyboard: UIStoryboard) -> AppViewController {
         return storyboard.viewControllerWithID(.AppViewController) as! AppViewController
     }
 }

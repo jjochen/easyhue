@@ -10,17 +10,19 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-extension PHBridgeSearching: PHBridgeSearchingType {
-    func rx_startSearch() -> Observable<[BridgeInfo]> {
+extension PHBridgeSearching: PHBridgeSearchingType
+{
+    func rx_startSearch() -> Observable<[BridgeInfo]>
+    {
         return Observable.create { observer in
             self.startSearchWithCompletionHandler { bridgesFound -> () in
                 let result = bridgesFound.map({ (id, ip) -> BridgeInfo in
                     return BridgeInfo(id: id.description, ip: ip.description)
                 })
-                observer.on(.Next(result))
-                observer.on(.Completed)
+                observer.on(.next(result))
+                observer.on(.completed)
             }
-            return AnonymousDisposable {
+            return Disposables.create{
                 self.cancelSearch()
             }
         }

@@ -12,10 +12,12 @@ import RxCocoa
 import RxDataSources
 import SVProgressHUD
 
+//check out: https://github.com/devxoul/RxTodo/blob/master/RxTodo/Sources/ViewControllers/TaskListViewController.swift
+
 class BridgeSelectionViewController: UIViewController {
     
     internal var viewModel: BridgeSelectionViewModel?
-    private var disposeBag = DisposeBag()
+    fileprivate var disposeBag = DisposeBag()
     
     // MARK: Outlets / Actions
 
@@ -32,22 +34,22 @@ class BridgeSelectionViewController: UIViewController {
     
     // MARK: - Bindings
     
-    private func setupBindings()
+    fileprivate func setupBindings()
     {
         guard let _ = viewModel else { return }
         
-        _ = refreshBarButtonItem.rx_tap.bindTo(viewModel!.refreshTaps)
+        _ = refreshBarButtonItem.rx.tap.bindTo(viewModel!.refreshTaps)
         
         viewModel!.availableBridges
-            .drive(tableView.rx_itemsWithCellIdentifier(TableViewCellreuseIdentifier.BridgeCell.rawValue, cellType: UITableViewCell.self)) { (_, bridgeInfo, cell) in
+            .drive(tableView.rx.items(cellIdentifier: TableViewCellreuseIdentifier.BridgeCell.rawValue, cellType: UITableViewCell.self)) { (_, bridgeInfo, cell) in
                 cell.textLabel?.text = bridgeInfo.id
                 cell.detailTextLabel?.text = bridgeInfo.ip
             }
             .addDisposableTo(disposeBag)
         
         tableView
-            .rx_modelSelected(BridgeInfo)
-            .subscribeNext { bridgeInfo in
+            .rx.modelSelected(BridgeInfo.self)
+            .subscribe { bridgeInfo in
                 print("\(bridgeInfo)")
             }
             .addDisposableTo(disposeBag)
@@ -56,25 +58,18 @@ class BridgeSelectionViewController: UIViewController {
             .map({ loading in
                 return !loading
             })
-            .drive(self.refreshBarButtonItem.rx_enabled)
+            .drive(self.refreshBarButtonItem.rx.enabled)
             .addDisposableTo(disposeBag)
         
         viewModel!.loading
-            .driveNext { loading in
-                if loading {
-                    SVProgressHUD.showWithStatus("Searching for Bridges...")
-                }
-                else {
-                    SVProgressHUD.dismiss()
-                }
-            }
+            .drive(SVProgressHUD.rx_animating)
             .addDisposableTo(disposeBag)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue == .ShowBridgePushLink {
             let cell = sender as! UITableViewCell!
-            let bridgePushLinkViewController = segue.destinationViewController as! BridgePushLinkViewController
+            let bridgePushLinkViewController = segue.destination as! BridgePushLinkViewController
 //            bridgePushLinkViewController.viewModel = self.viewModel.bridgePushLinkViewModel()
         }
     }
@@ -82,7 +77,7 @@ class BridgeSelectionViewController: UIViewController {
 
 
 extension BridgeSelectionViewController {
-    class func instantiateFromStoryboard(storyboard: UIStoryboard) -> BridgeSelectionViewController {
+    class func instantiateFromStoryboard(_ storyboard: UIStoryboard) -> BridgeSelectionViewController {
         return storyboard.viewControllerWithID(.BridgeSelectionViewController) as! BridgeSelectionViewController
     }
 }

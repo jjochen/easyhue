@@ -11,7 +11,7 @@ import SVProgressHUD
 
 extension SVProgressHUD {
     class func configureForEasyHue() {
-        SVProgressHUD.setDefaultMaskType(.Clear)
-        SVProgressHUD.setDefaultStyle(.Dark)
+        SVProgressHUD.setDefaultMaskType(.clear)
+        SVProgressHUD.setDefaultStyle(.dark)
     }
 }

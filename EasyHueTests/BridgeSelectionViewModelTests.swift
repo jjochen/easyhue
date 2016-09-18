@@ -57,7 +57,7 @@ class BridgeSelectionViewModelTests: XCTestCase {
 
 
 private class  PHBridgeSearchingStub: PHBridgeSearchingType {
-    func rx_startSearch() -> Observable<[BridgeInfo]> {
+    func rx.startSearch() -> Observable<[BridgeInfo]> {
         return Observable.create { observer in
             let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
             let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC)))

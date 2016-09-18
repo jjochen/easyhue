@@ -19,7 +19,7 @@ let bridgeMock2 = BridgeInfo(id: "id_2", ip: "ip_2")
 
 
 // This is handy so we can write expect(o) == 1 instead of expect(o.value) == 1 or whatever.
-public func equalFirst<T: Equatable>(expectedValue: T?) -> MatcherFunc<Observable<T>> {
+public func equalFirst<T: Equatable>(_ expectedValue: T?) -> MatcherFunc<Observable<T>> {
     return MatcherFunc { actualExpression, failureMessage in
         
         failureMessage.postfixMessage = "equal <\(expectedValue)>"
@@ -30,7 +30,7 @@ public func equalFirst<T: Equatable>(expectedValue: T?) -> MatcherFunc<Observabl
     }
 }
 
-public func equalFirst<T: Equatable>(expectedValue: T?) -> MatcherFunc<Variable<T>> {
+public func equalFirst<T: Equatable>(_ expectedValue: T?) -> MatcherFunc<Variable<T>> {
     return MatcherFunc { actualExpression, failureMessage in
         
         failureMessage.postfixMessage = "equal <\(expectedValue)>"
@@ -41,7 +41,7 @@ public func equalFirst<T: Equatable>(expectedValue: T?) -> MatcherFunc<Variable<
     }
 }
 
-public func equalFirst<T: Equatable>(expectedValue: T?) -> MatcherFunc<Observable<Optional<T>>> {
+public func equalFirst<T: Equatable>(_ expectedValue: T?) -> MatcherFunc<Observable<Optional<T>>> {
     return MatcherFunc { actualExpression, failureMessage in
         
         failureMessage.postfixMessage = "equal <\(expectedValue)>"
@@ -56,7 +56,7 @@ public func equalFirst<T: Equatable>(expectedValue: T?) -> MatcherFunc<Observabl
     }
 }
 
-public func equalFirst<T: Equatable>(expectedValue: T?) -> MatcherFunc<Variable<Optional<T>>> {
+public func equalFirst<T: Equatable>(_ expectedValue: T?) -> MatcherFunc<Variable<Optional<T>>> {
     return MatcherFunc { actualExpression, failureMessage in
         
         failureMessage.postfixMessage = "equal <\(expectedValue)>"

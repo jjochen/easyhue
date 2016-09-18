@@ -35,13 +35,13 @@ internal class BridgeSelectionViewModel: ViewModel
         let availableBridges = bridgeSearch
             .rx_startSearch()
             .trackActivity(loading)
-        let refreshAvailableBridges = refreshTaps
+        let refreshAvailableBridges = self.refreshTaps
             .flatMapLatest { _ -> Observable<[BridgeInfo]> in
                 return availableBridges
             }
             .shareReplay(1)
-        self.availableBridges = [availableBridges, refreshAvailableBridges]
-            .toObservable()
+        self.availableBridges = Observable
+            .from([availableBridges, refreshAvailableBridges])
             .merge()
             .asDriver(onErrorJustReturn: [])
     }

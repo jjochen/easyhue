@@ -13,7 +13,7 @@ import RxCocoa
 internal class BridgePushLinkViewModel: ViewModel
 {
     // MARK: Variables
-    private let _pushLinkProgress = Variable<Float>(0)
+    fileprivate let _pushLinkProgress = Variable<Float>(0)
     
     // MARK: Inputs
     let hueSDK: PHHueSDK
@@ -42,49 +42,49 @@ internal class BridgePushLinkViewModel: ViewModel
     // TODO: handle notifications with rx bindings
     
     // MARK: Notifications
-    private func registerForNotifications()
+    fileprivate func registerForNotifications()
     {
-        let notificationManager = PHNotificationManager.defaultManager();
-        notificationManager.registerObject(self, withSelector:#selector(authenticationSuccess), forNotification:PUSHLINK_LOCAL_AUTHENTICATION_SUCCESS_NOTIFICATION)
-        notificationManager.registerObject(self, withSelector:#selector(authenticationFailed), forNotification:PUSHLINK_LOCAL_AUTHENTICATION_FAILED_NOTIFICATION)
-        notificationManager.registerObject(self, withSelector:#selector(noLocalConnection), forNotification:PUSHLINK_NO_LOCAL_CONNECTION_NOTIFICATION)
-        notificationManager.registerObject(self, withSelector:#selector(noLocalBridge), forNotification:PUSHLINK_NO_LOCAL_BRIDGE_KNOWN_NOTIFICATION)
-        notificationManager.registerObject(self, withSelector:#selector(buttonNotPressed), forNotification:PUSHLINK_BUTTON_NOT_PRESSED_NOTIFICATION)
+        let notificationManager = PHNotificationManager.default();
+        notificationManager?.register(self, with:#selector(authenticationSuccess), forNotification:PUSHLINK_LOCAL_AUTHENTICATION_SUCCESS_NOTIFICATION)
+        notificationManager?.register(self, with:#selector(authenticationFailed), forNotification:PUSHLINK_LOCAL_AUTHENTICATION_FAILED_NOTIFICATION)
+        notificationManager?.register(self, with:#selector(noLocalConnection), forNotification:PUSHLINK_NO_LOCAL_CONNECTION_NOTIFICATION)
+        notificationManager?.register(self, with:#selector(noLocalBridge), forNotification:PUSHLINK_NO_LOCAL_BRIDGE_KNOWN_NOTIFICATION)
+        notificationManager?.register(self, with:#selector(buttonNotPressed), forNotification:PUSHLINK_BUTTON_NOT_PRESSED_NOTIFICATION)
     }
     
     func deregisterForNotifications()
     {
-        let notificationManager = PHNotificationManager.defaultManager();
-        notificationManager.deregisterObjectForAllNotifications(self);
+        let notificationManager = PHNotificationManager.default();
+        notificationManager?.deregisterObject(forAllNotifications: self);
     }
     
-    func authenticationSuccess(notifiction: NSNotification)
+    func authenticationSuccess(_ notifiction: Notification)
     {
         deregisterForNotifications()
         
     }
     
-    func authenticationFailed(notifiction: NSNotification)
+    func authenticationFailed(_ notifiction: Notification)
     {
         deregisterForNotifications()
         failWithError(PUSHLINK_TIME_LIMIT_REACHED, description: "Authentication failed: time limit reached.")
     }
     
-    func noLocalConnection(notifiction: NSNotification)
+    func noLocalConnection(_ notifiction: Notification)
     {
         deregisterForNotifications()
         failWithError(PUSHLINK_NO_CONNECTION, description: "Authentication failed: No local connection to bridge.")
     }
     
-    func noLocalBridge(notifiction: NSNotification)
+    func noLocalBridge(_ notifiction: Notification)
     {
         deregisterForNotifications()
         failWithError(PUSHLINK_NO_LOCAL_BRIDGE, description: "Authentication failed: No local bridge found.")
     }
     
-    func buttonNotPressed(notifiction: NSNotification)
+    func buttonNotPressed(_ notifiction: Notification)
     {
-        let userInfo: NSDictionary? = notifiction.userInfo as NSDictionary?
+        let userInfo: NSDictionary? = (notifiction as NSNotification).userInfo as NSDictionary?
         let progressPercentage = userInfo?["progressPercentage"]
         if (progressPercentage == nil)
         {
@@ -94,7 +94,7 @@ internal class BridgePushLinkViewModel: ViewModel
         _pushLinkProgress.value = (progressPercentage as! NSNumber).floatValue / Float(100)
     }
     
-    private func failWithError(errorCode: CLErrorCode, description: String)
+    fileprivate func failWithError(_ errorCode: CLErrorCode, description: String)
     {
         let userInfo = [NSLocalizedDescriptionKey: description]
         let error: PHError = PHError(domain: SDK_ERROR_DOMAIN, code: Int(errorCode.rawValue), userInfo: userInfo)

@@ -6,7 +6,7 @@ extension UIStoryboard {
         return UIStoryboard(name: StoryboardNames.Main.rawValue, bundle: nil)
     }
     
-    func viewControllerWithID(identifier:ViewControllerStoryboardIdentifier) -> UIViewController {
-        return self.instantiateViewControllerWithIdentifier(identifier.rawValue)
+    func viewControllerWithID(_ identifier:ViewControllerStoryboardIdentifier) -> UIViewController {
+        return self.instantiateViewController(withIdentifier: identifier.rawValue)
     }
 }

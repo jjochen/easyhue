@@ -13,7 +13,7 @@ import RxCocoa
 class BridgePushLinkViewController: UIViewController
 {
     internal var viewModel: BridgePushLinkViewModel?
-    private var disposeBag = DisposeBag()
+    fileprivate var disposeBag = DisposeBag()
     
     @IBOutlet weak var progressView: UIProgressView!
     
@@ -25,26 +25,27 @@ class BridgePushLinkViewController: UIViewController
         setupBindings()
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool)
+    {
         super.viewDidAppear(animated)
         self.viewModel?.startPushLinking()
     }
     
     // MARK: - Bindings
     
-    private func setupBindings()
+    fileprivate func setupBindings()
     {
-        viewModel?.pushLinkProgress
-            .subscribeNext { pushLinkProgress in
-                self.progressView.progress = pushLinkProgress
-            }
+        self.viewModel?.pushLinkProgress
+            .bindTo(self.progressView.rx.progress)
             .addDisposableTo(disposeBag)
     }
 }
 
 
-extension BridgePushLinkViewController {
-    class func instantiateFromStoryboard(storyboard: UIStoryboard) -> BridgePushLinkViewController {
+extension BridgePushLinkViewController
+{
+    class func instantiateFromStoryboard(_ storyboard: UIStoryboard) -> BridgePushLinkViewController
+    {
         return storyboard.viewControllerWithID(.BridgePushLinkViewController) as! BridgePushLinkViewController
     }
 }

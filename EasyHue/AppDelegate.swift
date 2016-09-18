@@ -19,38 +19,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return PHHueSDK()
     }()
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
         SVProgressHUD.configureForEasyHue()
         setupViewModel()
         return true
     }
 
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
         
     }
 
-    func applicationDidEnterBackground(application: UIApplication) {
+    func applicationDidEnterBackground(_ application: UIApplication) {
         
     }
 
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
         
     }
 
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
     }
 
-    func applicationWillTerminate(application: UIApplication) {
+    func applicationWillTerminate(_ application: UIApplication) {
     }
 
     
     // MARK: - Private Methods
     
-    private func setupViewModel() {
+    fileprivate func setupViewModel() {
         guard let appViewController = window?.rootViewController as? AppViewController else { return }
         
-        self.hueSDK.startUpSDK()
+        self.hueSDK.startUp()
         self.hueSDK.enableLogging(false)
         let viewModel = AppViewModel(hueSDK: self.hueSDK)
         appViewController.viewModel = viewModel
