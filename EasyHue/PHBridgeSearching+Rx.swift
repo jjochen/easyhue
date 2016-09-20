@@ -15,16 +15,26 @@ extension PHBridgeSearching: PHBridgeSearchingType
     func rx_startSearch() -> Observable<[BridgeInfo]>
     {
         return Observable.create { observer in
-            self.startSearchWithCompletionHandler { bridgesFound -> () in
-                let result = bridgesFound.map({ (id, ip) -> BridgeInfo in
-                    return BridgeInfo(id: id.description, ip: ip.description)
+            let cancel = Disposables.create {
+                self.cancelSearch()
+            }
+            
+            self.startSearch(completionHandler: { result in
+                guard let bridgesFound = result else {return}
+                if cancel.isDisposed {
+                    return
+                }
+                let result: [BridgeInfo] = bridgesFound.map({ (key, value) -> BridgeInfo in
+                    let emptyBridge = BridgeInfo(id: "", ip: "")
+                    guard let id = (key as? String) else {return emptyBridge}
+                    guard let ip = (value as? String) else {return emptyBridge}
+                    return BridgeInfo(id: id, ip: ip)
                 })
                 observer.on(.next(result))
                 observer.on(.completed)
-            }
-            return Disposables.create{
-                self.cancelSearch()
-            }
+            })
+            
+            return cancel
         }
     }
 }
