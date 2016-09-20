@@ -18,7 +18,6 @@ extension PHBridgeSearching: PHBridgeSearchingType
             let cancel = Disposables.create {
                 self.cancelSearch()
             }
-            
             self.startSearch(completionHandler: { result in
                 guard let bridgesFound = result else {return}
                 if cancel.isDisposed {
