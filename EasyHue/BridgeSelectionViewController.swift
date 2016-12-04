@@ -42,6 +42,7 @@ class BridgeSelectionViewController: UIViewController {
         
         viewModel!.availableBridges
             .drive(tableView.rx.items(cellIdentifier: TableViewCellreuseIdentifier.BridgeCell.rawValue, cellType: UITableViewCell.self)) { (_, bridgeInfo, cell) in
+//                cell.viewModel = self.viewModel
                 cell.textLabel?.text = bridgeInfo.id
                 cell.detailTextLabel?.text = bridgeInfo.ip
             }
@@ -68,9 +69,9 @@ class BridgeSelectionViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue == .ShowBridgePushLink {
-            let cell = sender as! UITableViewCell!
-            let bridgePushLinkViewController = segue.destination as! BridgePushLinkViewController
-//            bridgePushLinkViewController.viewModel = self.viewModel.bridgePushLinkViewModel()
+            guard let cell = sender as? UITableViewCell! else {return}
+            guard let bridgePushLinkViewController = segue.destination as? BridgePushLinkViewController else {return}
+            //bridgePushLinkViewController.viewModel = self.viewModel.bridgePushLinkViewModel()
         }
     }
 }
