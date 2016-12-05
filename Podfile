@@ -1,29 +1,32 @@
 source 'https://github.com/jjochen/podspecs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 use_frameworks!
 inhibit_all_warnings!
 
 
 target 'EasyHue' do
-    pod 'PhilipsHueSDK-iOS'
-    pod 'RxSwift', '~> 3.0.0-beta.1'
-    pod 'RxCocoa', '~> 3.0.0-beta.1'
+    #pod 'PhilipsHueSDK-iOS'
+    pod 'SwiftyHue'
+    pod 'RxSwift',    '~> 3.0'
+    pod 'RxCocoa',    '~> 3.0'
     #pod 'RxViewModel'
     #pod 'RxOptional'
-    pod 'RxDataSources', '~> 1.0.0-beta.2'
+	pod 'RxDataSources', '~> 1.0'
     #pod 'RealmSwift'
     pod 'SVProgressHUD'
     #pod 'SnapKit'
+    pod 'Log'
+	pod 'Toaster'
 
     target 'EasyHueTests' do
         inherit! :search_paths
         pod 'Quick'
         pod 'Nimble'
-        pod 'RxTests', '~> 3.0.0-beta.1'
         #pod 'RxNimble'
-        pod 'RxBlocking', '~> 3.0.0-beta.1'
+        pod 'RxBlocking', '~> 3.0'
+        pod 'RxTest',     '~> 3.0'
     end
 end
 

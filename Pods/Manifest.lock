@@ -1,48 +1,70 @@
 PODS:
-  - CocoaLumberjack (1.9.2):
-    - CocoaLumberjack/Extensions (= 1.9.2)
-  - CocoaLumberjack/Core (1.9.2)
-  - CocoaLumberjack/Extensions (1.9.2):
-    - CocoaLumberjack/Core
-  - Nimble (4.1.0)
-  - PhilipsHueSDK-iOS (1.11.2):
-    - CocoaLumberjack (~> 1.8)
-  - Quick (0.9.3)
-  - RxBlocking (3.0.0-beta.1):
-    - RxSwift (~> 3.0.0-beta.1)
-  - RxCocoa (3.0.0-beta.1):
-    - RxSwift (~> 3.0.0-beta.1)
-  - RxDataSources (1.0.0-beta.2):
-    - RxCocoa (~> 3.0.0-beta.1)
-    - RxSwift (~> 3.0.0-beta.1)
-  - RxSwift (3.0.0-beta.1)
-  - RxTests (3.0.0-beta.1):
-    - RxSwift (~> 3.0.0-beta.1)
-  - SVProgressHUD (2.0.3)
+  - Alamofire (4.0.1)
+  - CocoaAsyncSocket (7.4.3):
+    - CocoaAsyncSocket/All (= 7.4.3)
+  - CocoaAsyncSocket/All (7.4.3):
+    - CocoaAsyncSocket/GCD
+    - CocoaAsyncSocket/RunLoop
+  - CocoaAsyncSocket/GCD (7.4.3)
+  - CocoaAsyncSocket/RunLoop (7.4.3)
+  - Gloss (1.0.0)
+  - Log (1.0)
+  - Nimble (5.1.1)
+  - Quick (1.0.0)
+  - RxBlocking (3.0.1):
+    - RxSwift (~> 3.0)
+  - RxCocoa (3.0.1):
+    - RxSwift (~> 3.0)
+  - RxDataSources (1.0.0):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
+  - RxSwift (3.0.1)
+  - RxTest (3.0.1):
+    - RxSwift (~> 3.0)
+  - SVProgressHUD (2.1)
+  - SwiftyHue (0.2.4):
+    - SwiftyHue/Base (= 0.2.4)
+    - SwiftyHue/BridgeServices (= 0.2.4)
+  - SwiftyHue/Base (0.2.4):
+    - Alamofire (~> 4.0.1)
+    - Gloss (~> 1.0.0)
+    - Log (~> 1.0)
+  - SwiftyHue/BridgeServices (0.2.4):
+    - Alamofire (~> 4.0.1)
+    - CocoaAsyncSocket (~> 7.4.3)
+    - Gloss (~> 1.0.0)
+    - Log (~> 1.0)
+  - Toaster (2.0.1)
 
 DEPENDENCIES:
+  - Log
   - Nimble
-  - PhilipsHueSDK-iOS
   - Quick
-  - RxBlocking (~> 3.0.0-beta.1)
-  - RxCocoa (~> 3.0.0-beta.1)
-  - RxDataSources (~> 1.0.0-beta.2)
-  - RxSwift (~> 3.0.0-beta.1)
-  - RxTests (~> 3.0.0-beta.1)
+  - RxBlocking (~> 3.0)
+  - RxCocoa (~> 3.0)
+  - RxDataSources (~> 1.0)
+  - RxSwift (~> 3.0)
+  - RxTest (~> 3.0)
   - SVProgressHUD
+  - SwiftyHue
+  - Toaster
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: 628fca2e88ef06f7cf6817309aa405f325d9a6fa
-  Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
-  PhilipsHueSDK-iOS: dc7a46c819347b6895923960df1c9a6b4aa25cd6
-  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
-  RxBlocking: 422944880fe63b432c459dc87be7c8178dcf45f3
-  RxCocoa: 8cecf331302b8ae5381bbab1bccba4ede2eae6a8
-  RxDataSources: 1cd87dc97fd46be002942eb1dcb1b432535141dd
-  RxSwift: 0823e8d7969c23bfa9ddfb2afa4881e424a1a710
-  RxTests: 819cbca750007349f03cfdb89bc07d412f67ab96
-  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
+  Gloss: 014789e9e69ca18f127eacca999f4c9b0bff6d58
+  Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
+  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
+  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
+  RxBlocking: 5de082d09d1ab45b49173f309f1a97d6b50f34c4
+  RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
+  RxDataSources: 824693e84d00781d0a5e5cedc1ff95ce9250aacd
+  RxSwift: af5680055c4ad04480189c52d28385b1029493a6
+  RxTest: 9867e6f3c435af30fbdb44b6d8ec30b78c40b515
+  SVProgressHUD: 76eacbf6f547ee13b3b25e2fb42b52d4cad76112
+  SwiftyHue: 2e2f71937614c301100ce150cc479aafdb1338ee
+  Toaster: be65cd48e93a525b2a9cc4bd25a2bfc900e02d9f
 
-PODFILE CHECKSUM: 7fe5e641ab115eeda7ac8d2df8a59df9fdd2de1f
+PODFILE CHECKSUM: 48d26e99b8d49253118a92ad71879e6fa85f9bda
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1
