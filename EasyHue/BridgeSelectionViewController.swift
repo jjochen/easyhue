@@ -43,7 +43,7 @@ class BridgeSelectionViewController: UIViewController {
         viewModel!.availableBridges
             .drive(tableView.rx.items(cellIdentifier: TableViewCellreuseIdentifier.BridgeCell.rawValue, cellType: UITableViewCell.self)) { (_, bridgeInfo, cell) in
 //                cell.viewModel = self.viewModel
-                cell.textLabel?.text = bridgeInfo.id
+                cell.textLabel?.text = bridgeInfo.friendlyName
                 cell.detailTextLabel?.text = bridgeInfo.ip
             }
             .addDisposableTo(disposeBag)
@@ -59,7 +59,7 @@ class BridgeSelectionViewController: UIViewController {
             .map({ loading in
                 return !loading
             })
-            .drive(self.refreshBarButtonItem.rx.enabled)
+            .drive(self.refreshBarButtonItem.rx.isEnabled)
             .addDisposableTo(disposeBag)
         
         viewModel!.loading

@@ -9,37 +9,40 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import SwiftyHue
 
 
 internal class BridgeSelectionViewModel: ViewModel
 {
     // MARK: Input
-    let hueSDK: PHHueSDKType
-    let bridgeSearch: PHBridgeSearchingType
+    var bridgeFinder: BridgeFinder
     var refreshTaps = PublishSubject<Void>()
     
     // MARK: Output
-    internal let availableBridges: Driver<[BridgeInfo]>
+    internal let availableBridges: Driver<[HueBridge]>
     internal let loading: Driver<Bool>
     
     
     // MARK: - Livecycle
     
-    init(hueSDK: PHHueSDKType, bridgeSearch: PHBridgeSearchingType) {
-        self.hueSDK = hueSDK
-        self.bridgeSearch = bridgeSearch
+    init(bridgeFinder: BridgeFinder) {
+        self.bridgeFinder = bridgeFinder
+        bridgeFinder.start()
         
         let loading = ActivityIndicator()
         self.loading = loading.asDriver()
         
-        let availableBridges = bridgeSearch
-            .rx_startSearch()
+        let availableBridges = bridgeFinder
+            .rx
+            .bridges
             .trackActivity(loading)
+        
         let refreshAvailableBridges = self.refreshTaps
-            .flatMapLatest { _ -> Observable<[BridgeInfo]> in
+            .flatMapLatest { _ -> Observable<[HueBridge]> in
                 return availableBridges
             }
             .shareReplay(1)
+        
         self.availableBridges = Observable
             .from([availableBridges, refreshAvailableBridges])
             .merge()

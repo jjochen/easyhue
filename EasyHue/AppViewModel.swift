@@ -9,26 +9,17 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import SwiftyHue
 
 class AppViewModel : ViewModel
 {
     // MARK: - Input
     
-    let hueSDK: PHHueSDK
-    
-    
-    // MARK: - Livecycle
-    
-    init(hueSDK: PHHueSDK) {
-        self.hueSDK = hueSDK
-    }
-    
-    
     // MARK: - View Models
     
     func bridgeSelectionViewModel() -> BridgeSelectionViewModel {
-        let bridgeSearch = PHBridgeSearching(upnpSearch: true, andPortalSearch: true, andIpAdressSearch: true)
-        return BridgeSelectionViewModel(hueSDK: self.hueSDK, bridgeSearch: bridgeSearch!)
+        let finder = BridgeFinder()
+        return BridgeSelectionViewModel(bridgeFinder: finder)
     }
     
 }

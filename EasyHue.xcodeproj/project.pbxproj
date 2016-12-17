@@ -13,7 +13,6 @@
 		190E5AE41C9ED7BD009FBD95 /* BridgeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE31C9ED7BD009FBD95 /* BridgeInfo.swift */; };
 		190E5AE81C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AE71C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift */; };
 		190E5AEC1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AEB1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift */; };
-		190E5AEF1C9EF317009FBD95 /* PHHueSDK+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AEE1C9EF317009FBD95 /* PHHueSDK+Rx.swift */; };
 		190E5AF41C9F32D0009FBD95 /* BridgeInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AF31C9F32D0009FBD95 /* BridgeInfoTests.swift */; };
 		191C071E1C7E108200AE69D3 /* BridgePushLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C071D1C7E108200AE69D3 /* BridgePushLinkViewController.swift */; };
 		191C07211C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C07201C7F770900AE69D3 /* BridgePushLinkViewModel.swift */; };
@@ -21,7 +20,8 @@
 		1920B3CF1CA829F400CBF97B /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920B3CE1CA829F400CBF97B /* TestHelpers.swift */; };
 		1943903D1C9D7F600029DD0C /* BridgeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1943903C1C9D7F600029DD0C /* BridgeSelectionViewController.swift */; };
 		194390411C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390401C9D7F790029DD0C /* BridgeSelectionViewModel.swift */; };
-		194390531C9E0E260029DD0C /* PHBridgeSearching+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194390521C9E0E260029DD0C /* PHBridgeSearching+Rx.swift */; };
+		19626DEE1DF611CA009F55BC /* RxBridgeFinderDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19626DED1DF611CA009F55BC /* RxBridgeFinderDelegateProxy.swift */; };
+		19626DF41DF76C6E009F55BC /* BridgeFinder+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19626DF31DF76C6E009F55BC /* BridgeFinder+Rx.swift */; };
 		196674221D8F36D000653094 /* SVProgressHUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196674211D8F36D000653094 /* SVProgressHUD+Rx.swift */; };
 		196674231D8F36D000653094 /* SVProgressHUD+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196674211D8F36D000653094 /* SVProgressHUD+Rx.swift */; };
 		1976B4E31CA2D35000D510EC /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4E21CA2D35000D510EC /* UIStoryboard+Extensions.swift */; };
@@ -70,6 +70,8 @@
 		1943903C1C9D7F600029DD0C /* BridgeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewController.swift; sourceTree = "<group>"; };
 		194390401C9D7F790029DD0C /* BridgeSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewModel.swift; sourceTree = "<group>"; };
 		194390521C9E0E260029DD0C /* PHBridgeSearching+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHBridgeSearching+Rx.swift"; sourceTree = "<group>"; };
+		19626DED1DF611CA009F55BC /* RxBridgeFinderDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxBridgeFinderDelegateProxy.swift; sourceTree = "<group>"; };
+		19626DF31DF76C6E009F55BC /* BridgeFinder+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BridgeFinder+Rx.swift"; sourceTree = "<group>"; };
 		196674211D8F36D000653094 /* SVProgressHUD+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+Rx.swift"; sourceTree = "<group>"; };
 		1976B4E21CA2D35000D510EC /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		1976B4E61CA2D94400D510EC /* StoryboardIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiers.swift; sourceTree = "<group>"; };
@@ -155,6 +157,8 @@
 		191C07241C80417E00AE69D3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				19626DED1DF611CA009F55BC /* RxBridgeFinderDelegateProxy.swift */,
+				19626DF31DF76C6E009F55BC /* BridgeFinder+Rx.swift */,
 				191C071B1C7CE68900AE69D3 /* HueSDKClient_not_in_use.swift */,
 				190E5ADE1C9EC03C009FBD95 /* ActivityIndicator.swift */,
 				1976B4EB1CA495F100D510EC /* ViewModel.swift */,
@@ -335,7 +339,7 @@
 			attributes = {
 				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Jochen Pfeiffer";
 				TargetAttributes = {
 					19BC782F1C7C696000783244 = {
@@ -495,18 +499,18 @@
 				1976B4E71CA2D94400D510EC /* StoryboardIdentifiers.swift in Sources */,
 				19051FF11D91D96F008FA8AA /* BridgeTableViewCell.swift in Sources */,
 				1976B4F21CA4A93000D510EC /* UIViewController+Extensions.swift in Sources */,
+				19626DF41DF76C6E009F55BC /* BridgeFinder+Rx.swift in Sources */,
+				19626DEE1DF611CA009F55BC /* RxBridgeFinderDelegateProxy.swift in Sources */,
 				191C071E1C7E108200AE69D3 /* BridgePushLinkViewController.swift in Sources */,
 				1976B4EC1CA495F100D510EC /* ViewModel.swift in Sources */,
 				190E5AE41C9ED7BD009FBD95 /* BridgeInfo.swift in Sources */,
 				194390411C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */,
 				1976B4F01CA4A8D400D510EC /* UIStoryboardSegue+Extensions.swift in Sources */,
-				194390531C9E0E260029DD0C /* PHBridgeSearching+Rx.swift in Sources */,
 				1976B4EA1CA48A3E00D510EC /* AppViewController.swift in Sources */,
 				190E5AEC1C9EF1A8009FBD95 /* PHHueSDKProtocol.swift in Sources */,
 				1976B4E31CA2D35000D510EC /* UIStoryboard+Extensions.swift in Sources */,
 				190E5AE81C9EF072009FBD95 /* PHBridgeSearchingProtocol.swift in Sources */,
 				196674221D8F36D000653094 /* SVProgressHUD+Rx.swift in Sources */,
-				190E5AEF1C9EF317009FBD95 /* PHHueSDK+Rx.swift in Sources */,
 				191C07211C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,7 +595,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -632,7 +636,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -645,6 +649,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BA53F1946EC5499EEE49F00C /* Pods-EasyHue.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -662,6 +667,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6F3D573D0045088F16AD5A2B /* Pods-EasyHue.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -678,6 +684,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0C382A52744C5DE71ED3A101 /* Pods-EasyHueTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyHueTests/Info.plist;
@@ -695,6 +702,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F2ABEAA71A1FAB0DC6B5DFFE /* Pods-EasyHueTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyHueTests/Info.plist;

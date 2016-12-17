@@ -15,9 +15,6 @@ import SVProgressHUD
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    lazy var hueSDK: PHHueSDK = {
-        return PHHueSDK()
-    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
@@ -49,10 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     fileprivate func setupViewModel() {
         guard let appViewController = window?.rootViewController as? AppViewController else { return }
-        
-        self.hueSDK.startUp()
-        self.hueSDK.enableLogging(false)
-        let viewModel = AppViewModel(hueSDK: self.hueSDK)
+        let viewModel = AppViewModel()
         appViewController.viewModel = viewModel
     }
 
