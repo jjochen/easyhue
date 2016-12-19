@@ -24,6 +24,11 @@ internal class BridgeSelectionViewModel: ViewModel
     
     // MARK: - Livecycle
     
+    public override convenience init()
+    {
+        self.init(bridgeFinder: BridgeFinder())
+    }
+    
     init(bridgeFinder: BridgeFinder) {
         self.bridgeFinder = bridgeFinder
         
