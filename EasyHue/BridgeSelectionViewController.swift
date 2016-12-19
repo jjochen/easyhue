@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 import SVProgressHUD
+import SwiftyHue
 
 //check out: https://github.com/devxoul/RxTodo/blob/master/RxTodo/Sources/ViewControllers/TaskListViewController.swift
 
@@ -49,9 +50,9 @@ class BridgeSelectionViewController: UIViewController {
             .addDisposableTo(disposeBag)
         
         tableView
-            .rx.modelSelected(BridgeInfo.self)
-            .subscribe { bridgeInfo in
-                print("\(bridgeInfo)")
+            .rx.modelSelected(HueBridge.self)
+            .subscribe { hueBridge in
+                print("\(hueBridge)")
             }
             .addDisposableTo(disposeBag)
         

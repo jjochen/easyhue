@@ -22,12 +22,10 @@ internal class BridgeSelectionViewModel: ViewModel
     internal let availableBridges: Driver<[HueBridge]>
     internal let loading: Driver<Bool>
     
-    
     // MARK: - Livecycle
     
     init(bridgeFinder: BridgeFinder) {
         self.bridgeFinder = bridgeFinder
-        bridgeFinder.start()
         
         let loading = ActivityIndicator()
         self.loading = loading.asDriver()
@@ -47,5 +45,10 @@ internal class BridgeSelectionViewModel: ViewModel
             .from([availableBridges, refreshAvailableBridges])
             .merge()
             .asDriver(onErrorJustReturn: [])
+    }
+    
+    public func startSearch()
+    {
+        self.bridgeFinder.start()
     }
 }

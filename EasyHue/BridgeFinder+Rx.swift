@@ -25,6 +25,7 @@ extension Reactive where Base: BridgeFinder {
     }
     
     public var bridges: Observable<[HueBridge]> {
+        base.start()
         let proxy = RxBridgeFinderDelegateProxy.proxyForObject(base)
         return proxy.bridgesSubject
     }
