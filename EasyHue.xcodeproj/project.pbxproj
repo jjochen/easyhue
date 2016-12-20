@@ -10,7 +10,6 @@
 		19051FF11D91D96F008FA8AA /* BridgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19051FF01D91D96F008FA8AA /* BridgeTableViewCell.swift */; };
 		19051FF21D91D96F008FA8AA /* BridgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19051FF01D91D96F008FA8AA /* BridgeTableViewCell.swift */; };
 		190E5ADF1C9EC03C009FBD95 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5ADE1C9EC03C009FBD95 /* ActivityIndicator.swift */; };
-		190E5AF41C9F32D0009FBD95 /* BridgeInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190E5AF31C9F32D0009FBD95 /* BridgeInfoTests.swift */; };
 		191C071E1C7E108200AE69D3 /* BridgePushLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C071D1C7E108200AE69D3 /* BridgePushLinkViewController.swift */; };
 		191C07211C7F770900AE69D3 /* BridgePushLinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C07201C7F770900AE69D3 /* BridgePushLinkViewModel.swift */; };
 		191C07261C81B68900AE69D3 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191C07251C81B68900AE69D3 /* AppViewModel.swift */; };
@@ -28,12 +27,12 @@
 		1976B4EE1CA4A1D000D510EC /* SVProgressHUD+EasyHue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4ED1CA4A1D000D510EC /* SVProgressHUD+EasyHue.swift */; };
 		1976B4F01CA4A8D400D510EC /* UIStoryboardSegue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4EF1CA4A8D400D510EC /* UIStoryboardSegue+Extensions.swift */; };
 		1976B4F21CA4A93000D510EC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1976B4F11CA4A93000D510EC /* UIViewController+Extensions.swift */; };
+		19A056531E09D27800BA559F /* BridgeFinderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A056521E09D27800BA559F /* BridgeFinderProtocol.swift */; };
 		19A0AF461E0880640070E070 /* EHError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A0AF451E0880640070E070 /* EHError.swift */; };
 		19BC78341C7C696000783244 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC78331C7C696000783244 /* AppDelegate.swift */; };
 		19BC783B1C7C696000783244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BC78391C7C696000783244 /* Main.storyboard */; };
 		19BC783D1C7C696000783244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19BC783C1C7C696000783244 /* Assets.xcassets */; };
 		19BC78401C7C696000783244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BC783E1C7C696000783244 /* LaunchScreen.storyboard */; };
-		19BC784B1C7C696000783244 /* BridgeSelectionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BC784A1C7C696000783244 /* BridgeSelectionViewModelTests.swift */; };
 		E336B8C8C3AD87CE089C71D3 /* Pods_EasyHueTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91490AA5BD0BF2A168BB013 /* Pods_EasyHueTests.framework */; };
 		F699EFEF8B0E091343B7C3A2 /* Pods_EasyHue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CE1A2E7257502655E7FB96 /* Pods_EasyHue.framework */; };
 /* End PBXBuildFile section */
@@ -52,7 +51,6 @@
 		0C382A52744C5DE71ED3A101 /* Pods-EasyHueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyHueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests.debug.xcconfig"; sourceTree = "<group>"; };
 		19051FF01D91D96F008FA8AA /* BridgeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeTableViewCell.swift; sourceTree = "<group>"; };
 		190E5ADE1C9EC03C009FBD95 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		190E5AF31C9F32D0009FBD95 /* BridgeInfoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeInfoTests.swift; sourceTree = "<group>"; };
 		191C07131C7CB04C00AE69D3 /* EasyHue-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyHue-Bridging-Header.h"; sourceTree = "<group>"; };
 		191C07141C7CB04C00AE69D3 /* EasyHueTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EasyHueTests-Bridging-Header.h"; path = "../EasyHue/EasyHueTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		191C071D1C7E108200AE69D3 /* BridgePushLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgePushLinkViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +70,7 @@
 		1976B4ED1CA4A1D000D510EC /* SVProgressHUD+EasyHue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+EasyHue.swift"; sourceTree = "<group>"; };
 		1976B4EF1CA4A8D400D510EC /* UIStoryboardSegue+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboardSegue+Extensions.swift"; sourceTree = "<group>"; };
 		1976B4F11CA4A93000D510EC /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		19A056521E09D27800BA559F /* BridgeFinderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeFinderProtocol.swift; sourceTree = "<group>"; };
 		19A0AF451E0880640070E070 /* EHError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EHError.swift; sourceTree = "<group>"; };
 		19BC78301C7C696000783244 /* EasyHue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyHue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BC78331C7C696000783244 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +112,7 @@
 		190E5AEA1C9EF079009FBD95 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				19A056521E09D27800BA559F /* BridgeFinderProtocol.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -246,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				1920B3CE1CA829F400CBF97B /* TestHelpers.swift */,
-				190E5AF31C9F32D0009FBD95 /* BridgeInfoTests.swift */,
 				19BC784A1C7C696000783244 /* BridgeSelectionViewModelTests.swift */,
 				190E5AF11C9F127E009FBD95 /* Resources */,
 				1920B3CC1CA74DF300CBF97B /* BridgeSelectionViewModelSpecs.swift */,
@@ -587,6 +586,7 @@
 				19626DF41DF76C6E009F55BC /* BridgeFinder+Rx.swift in Sources */,
 				19626DEE1DF611CA009F55BC /* RxBridgeFinderDelegateProxy.swift in Sources */,
 				191C071E1C7E108200AE69D3 /* BridgePushLinkViewController.swift in Sources */,
+				19A056531E09D27800BA559F /* BridgeFinderProtocol.swift in Sources */,
 				1976B4EC1CA495F100D510EC /* ViewModel.swift in Sources */,
 				194390411C9D7F790029DD0C /* BridgeSelectionViewModel.swift in Sources */,
 				1976B4F01CA4A8D400D510EC /* UIStoryboardSegue+Extensions.swift in Sources */,
@@ -601,10 +601,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19BC784B1C7C696000783244 /* BridgeSelectionViewModelTests.swift in Sources */,
 				196674231D8F36D000653094 /* SVProgressHUD+Rx.swift in Sources */,
 				19051FF21D91D96F008FA8AA /* BridgeTableViewCell.swift in Sources */,
-				190E5AF41C9F32D0009FBD95 /* BridgeInfoTests.swift in Sources */,
 				1920B3CF1CA829F400CBF97B /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

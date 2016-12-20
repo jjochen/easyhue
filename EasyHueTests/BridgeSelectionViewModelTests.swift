@@ -10,6 +10,7 @@ import XCTest
 import RxSwift
 import RxCocoa
 import Nimble
+import SwiftyHue
 @testable import EasyHue
 
 
@@ -22,7 +23,7 @@ class BridgeSelectionViewModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        self.viewModel = BridgeSelectionViewModel(hueSDK: PHHueSDKStub(), bridgeSearch: PHBridgeSearchingStub())
+        self.viewModel = BridgeSelectionViewModel(bridgeFinder: BridgeFinderStub())
         self.disposeBag = DisposeBag()
     }
     
@@ -33,7 +34,7 @@ class BridgeSelectionViewModelTests: XCTestCase {
     
     func testAvailableBridges_returnsMockedBridges() {
         
-        var bridges: [BridgeInfo]! = []
+        var bridges: [HueBridge]! = []
         self.viewModel.availableBridges.driveNext { result in
             bridges = result
         }.addDisposableTo(disposeBag)
@@ -56,8 +57,8 @@ class BridgeSelectionViewModelTests: XCTestCase {
 }
 
 
-private class  PHBridgeSearchingStub: PHBridgeSearchingType {
-    func rx.startSearch() -> Observable<[BridgeInfo]> {
+private class  BridgeFinderStub: BridgeFinderType {
+    func rx.bridges() -> Observable<[BridgeInfo]> {
         return Observable.create { observer in
             let queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
             let delay = dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC)))
@@ -69,7 +70,3 @@ private class  PHBridgeSearchingStub: PHBridgeSearchingType {
         }
     }
 }
-private class  PHHueSDKStub: PHHueSDKType {
-    
-}
-
