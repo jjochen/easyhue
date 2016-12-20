@@ -1,4 +1,9 @@
-
+workspace "EasyHue.xcworkspace"
 scheme "EasyHue"
-
+configuration "Debug"
+sdk "iphonesimulator"
+devices ["iPhone 7 (10.2)"]
+code_coverage true
+clean true
+output_types "html"
 
