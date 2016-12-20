@@ -21,7 +21,7 @@ PODS:
   - RxSwift (3.0.1)
   - RxTest (3.0.1):
     - RxSwift (~> 3.0)
-  - SVProgressHUD (2.1)
+  - SVProgressHUD (2.1.2)
   - SwiftyHue (0.2.4):
     - SwiftyHue/Base (= 0.2.4)
     - SwiftyHue/BridgeServices (= 0.2.4)
@@ -52,7 +52,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
-  Gloss: 014789e9e69ca18f127eacca999f4c9b0bff6d58
+  Gloss: '014789e9e69ca18f127eacca999f4c9b0bff6d58'
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
@@ -61,7 +61,7 @@ SPEC CHECKSUMS:
   RxDataSources: 824693e84d00781d0a5e5cedc1ff95ce9250aacd
   RxSwift: af5680055c4ad04480189c52d28385b1029493a6
   RxTest: 9867e6f3c435af30fbdb44b6d8ec30b78c40b515
-  SVProgressHUD: 76eacbf6f547ee13b3b25e2fb42b52d4cad76112
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftyHue: 2e2f71937614c301100ce150cc479aafdb1338ee
   Toaster: be65cd48e93a525b2a9cc4bd25a2bfc900e02d9f
 

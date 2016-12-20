@@ -282,12 +282,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19BC785A1C7C696000783244 /* Build configuration list for PBXNativeTarget "EasyHue" */;
 			buildPhases = (
+				0E544E9B53C65D0197131E28 /* [CP] Check Pods Manifest.lock */,
 				24B8619D61DDB9E92F771D6E /* [CP] Check Pods Manifest.lock */,
 				19BC782C1C7C696000783244 /* Sources */,
 				19BC782D1C7C696000783244 /* Frameworks */,
 				19BC782E1C7C696000783244 /* Resources */,
 				8EB554646A015894B5BFF555 /* [CP] Embed Pods Frameworks */,
 				7144B3A81BFE07B7943EFCCB /* [CP] Copy Pods Resources */,
+				2AAD434F0F6545F9E94E74BA /* 📦 Embed Pods Frameworks */,
+				B6EC764B8488362838954677 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,12 +305,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19BC785D1C7C696000783244 /* Build configuration list for PBXNativeTarget "EasyHueTests" */;
 			buildPhases = (
+				E39D0BAB3809F5419C9ACCED /* [CP] Check Pods Manifest.lock */,
 				209511651600A440F8EC7420 /* [CP] Check Pods Manifest.lock */,
 				19BC78421C7C696000783244 /* Sources */,
 				19BC78431C7C696000783244 /* Frameworks */,
 				19BC78441C7C696000783244 /* Resources */,
 				378E75E0F793D4A044E8B0CC /* [CP] Embed Pods Frameworks */,
 				058B157FA39EAE2C14FED89E /* [CP] Copy Pods Resources */,
+				C0984E2183CF6E012AA48463 /* 📦 Embed Pods Frameworks */,
+				9643DBB6EEB1A87809B00557 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -397,6 +403,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		0E544E9B53C65D0197131E28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		209511651600A440F8EC7420 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -425,6 +446,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2AAD434F0F6545F9E94E74BA /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		378E75E0F793D4A044E8B0CC /* [CP] Embed Pods Frameworks */ = {
@@ -470,6 +506,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9643DBB6EEB1A87809B00557 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6EC764B8488362838954677 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHue/Pods-EasyHue-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0984E2183CF6E012AA48463 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyHueTests/Pods-EasyHueTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E39D0BAB3809F5419C9ACCED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -635,7 +731,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BA53F1946EC5499EEE49F00C /* Pods-EasyHue.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -653,7 +748,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6F3D573D0045088F16AD5A2B /* Pods-EasyHue.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -670,7 +764,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0C382A52744C5DE71ED3A101 /* Pods-EasyHueTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyHueTests/Info.plist;
@@ -688,7 +781,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F2ABEAA71A1FAB0DC6B5DFFE /* Pods-EasyHueTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = EasyHueTests/Info.plist;
