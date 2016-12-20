@@ -18,8 +18,7 @@ class AppViewModel : ViewModel
     // MARK: - View Models
     
     func bridgeSelectionViewModel() -> BridgeSelectionViewModel {
-        let finder = BridgeFinder()
-        return BridgeSelectionViewModel(bridgeFinder: finder)
+        return BridgeSelectionViewModel()
     }
     
 }

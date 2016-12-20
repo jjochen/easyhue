@@ -23,6 +23,7 @@ public class RxBridgeFinderDelegateProxy : DelegateProxy, DelegateProxyType, Bri
         bridgesSubject.on(.next(bridges))
         // TODO !!!
         //self._forwardToDelegate?.bridgeFinder(finder, didFinishWithResult: bridges)
+        bridgesSubject.on(.completed)
     }
     
     

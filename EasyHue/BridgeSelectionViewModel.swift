@@ -15,7 +15,6 @@ import SwiftyHue
 internal class BridgeSelectionViewModel: ViewModel
 {
     // MARK: Input
-    var bridgeFinder: BridgeFinder
     var refreshTaps = PublishSubject<Void>()
     
     // MARK: Output
@@ -24,14 +23,9 @@ internal class BridgeSelectionViewModel: ViewModel
     
     // MARK: - Livecycle
     
-    public override convenience init()
+    public override init()
     {
-        self.init(bridgeFinder: BridgeFinder())
-    }
-    
-    init(bridgeFinder: BridgeFinder) {
-        self.bridgeFinder = bridgeFinder
-        
+        let bridgeFinder = BridgeFinder()
         let loading = ActivityIndicator()
         self.loading = loading.asDriver()
         
@@ -50,10 +44,5 @@ internal class BridgeSelectionViewModel: ViewModel
             .from([availableBridges, refreshAvailableBridges])
             .merge()
             .asDriver(onErrorJustReturn: [])
-    }
-    
-    public func startSearch()
-    {
-        self.bridgeFinder.start()
     }
 }
